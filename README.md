@@ -1,6 +1,8 @@
 # Welcome to LCSEE myLOUD on rails
 =================================
 
+*Please see repo mycloud for old commits*
+
 ### Dev Environment
 
 Set up the ssh tunnel for ldap:

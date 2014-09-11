@@ -1,0 +1,23 @@
+<div class="page-header">
+  <h2>Welcome to myLOUD</h2>
+</div>
+
+
+<div class="row">
+  <div class="span10">
+    <p>
+      Please note that this app saves the IP of the machine you are
+      logging in from. This is so we can provision your cloud with a
+      security group to prevent malicious attacks. This means that ssh
+      access will to your cloud instances will be limited to the
+      machine you are logging in from.
+    </p>
+    <p style="padding: 10px 0;">
+      Your security group currently allows ssh access from
+      <b><%= current_user.current_sign_in_ip %></b>.
+    <p>
+      Navigate to the control panel if you wish to setup a cloud
+      instance for yourself.
+    </p>
+  </div>
+</div>

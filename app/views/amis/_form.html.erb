@@ -1,0 +1,37 @@
+<%= form_for @ami do |f|%>
+<% if @ami.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@ami.errors.count, "error") %> prohibited this ami from being saved:</h2>
+  
+  <ul>
+    <% @ami.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="control-group">
+  <%= f.label "Image ID" %>
+  <div class="controls">
+    <%= f.text_field :imageId %>
+  </div>
+</div>
+<div class="control-group">
+  <%= f.label :name %>
+  <div class="controls">
+    <%= f.text_field :name %>
+  </div>
+</div>
+<div class="control-group">
+  <%= f.label :description %>
+  <div class="controls">
+    <%= f.text_area :description, :style => 'height: 100px' %>
+  </div>
+</div>
+<div class="form-actions">
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+  admin_tools_path, :class => 'btn' %>
+</div>
+<% end %>

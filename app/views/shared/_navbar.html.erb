@@ -1,0 +1,49 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner nav-WVU">
+    <div class="container-fluid">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <%= link_to "LCSEE myLOUD", root_path, :class => 'brand' %>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li class="<%= 'active' if params[:controller] == 'welcome' %>">
+            <%= link_to "Home", root_path %>
+          </li>
+          <% if user_signed_in? %>
+          <li class="<%= 'active' if params[:controller] == 'control_panel' %>">
+            <%= link_to "Control Panel", control_panel_path %>
+          </li>
+          <% if current_user.admin %>
+          <li class="<%= 'active' if params[:controller] == 'admin_tools' %>">
+            <%= link_to "Admin Tools", admin_tools_path %>
+          </li>
+          <% end %>
+          <% end %>
+        </ul>
+        <% if user_signed_in? %>
+        <div class="hidden-phone">
+          <ul class="small-ul nav pull-right">
+            <li style="color: #999999">
+              <%= link_to "Logout #{current_user.login}", destroy_user_session_path,
+                  :method => :delete %>
+	    </li>
+          </ul>
+        </div>
+        <div class="visible-phone">
+          <ul class="nav">
+            <li><%= link_to "Logout #{current_user.login}", destroy_user_session_path,
+                    :method => :delete %></li>
+          </ul>
+        </div>
+        <% else %>
+        <ul class="nav pull-right">
+          <li><%= link_to "Sign in", new_user_session_path %></li>
+        </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

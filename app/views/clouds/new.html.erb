@@ -1,0 +1,39 @@
+<div class="page-header">
+  <h1>Launch Cloud</h1>
+</div>
+
+<div class="row">
+  <div class="span4">
+    <%= form_for(@cloud) do |f| %>
+    <div class="controls">
+      <%= f.label(:ami, "AMI") %>
+      <div class="control-group">
+	<%= f.collection_select(:ami_id, @amis, :imageId, :name) %>
+      </div>
+    </div>
+    <%= f.submit "Create", class: 'btn btn-primary', style: 'width: 220px' %>
+    <% end %>
+  </div>
+
+  <div class="span8">
+    <table class="table table-striped">
+      <thead>
+	<tr>
+	  <th>AMI</th>
+	  <th>Description</th>
+	</tr>
+      </thead>
+      <tbody>
+	<% @amis.each do |ami| %>
+	<tr>
+	  <th><%= ami.name %></th>
+	  <td><%= ami.description %></td>
+	</tr>
+	<% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+

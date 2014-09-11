@@ -1,0 +1,18 @@
+<td><%= get_instance_status(cloud.instance_id) %></td>
+
+<% if get_instance_status(cloud.instance_id).to_s == "stopped" %>
+  <td></td>
+  <td><%= link_to "Start", start_cloud_path(cloud), method: 'put', class: 'btn btn-mini btn-success' %></td>
+<% elsif get_instance_status(cloud.instance_id).to_s == "running" %>
+  <td><%= link_to "Reboot", reboot_cloud_path(cloud), method: 'put', class: 'btn btn-mini btn-warning' %></td>
+  <td><%= link_to "Stop", stop_cloud_path(cloud), method: 'put', class: 'btn btn-mini btn-warning' %></td>
+<% else %>
+  <td></td>
+  <td></td>
+<% end %>
+
+<td>
+  <%= link_to 'Terminate', cloud,
+      method: :delete, data: { confirm: 'Are you sure?' },
+      :class => 'btn btn-mini btn-danger' %>
+</td>

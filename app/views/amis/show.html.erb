@@ -1,0 +1,20 @@
+<div class="page-header">
+  <h1><%= @ami.name %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong>Image ID:</strong></dt>
+  <dd><%= @ami.imageId %>&nbsp;</dd>
+  <dt></dt>
+  <dd></dd>
+  <dt><strong>Description:</strong></dt>
+  <dd><%= @ami.description %>&nbsp;</dd>
+</dl>
+
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+  admin_tools_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+  edit_ami_path(@ami), :class => 'btn' %>
+</div>

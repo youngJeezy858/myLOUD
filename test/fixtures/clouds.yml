@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  instance_id: MyString
+  turn_off_at: 2014-08-08 20:56:35
+  ami_id: MyString
+  subnet_id: MyString
+  account: 
+
+two:
+  name: MyString
+  instance_id: MyString
+  turn_off_at: 2014-08-08 20:56:35
+  ami_id: MyString
+  subnet_id: MyString
+  account: 

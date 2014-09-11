@@ -1,0 +1,104 @@
+<%- model_class = Entitlement -%>
+<div class="span3">
+</br>
+  <div class="kfrank-sidebar well">
+    <h4><%= current_user.login %>'s account</h4>
+    <ul style="list-style: none;">
+      <li>
+	<strong>Time left:</strong>
+	<%= current_user.account.minutes / 60 %>:<%= sprintf("%.2d", 
+			current_user.account.minutes % 60) %>
+      </li>
+      <li>
+	<strong>Instance Limit:</strong> 
+	<%= current_user.account.instance_limit %>
+      </li>
+      <li>
+	<strong>IP:</strong> 
+	<%= current_user.current_sign_in_ip %>
+      </li>
+    </dl>
+  </div>
+</div>
+
+<div class="span8">
+  <div class="page-header">
+    <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+	<th><%= model_class.human_attribute_name(:name) %></th>
+	<th>IP Address</th>
+	<th><%= model_class.human_attribute_name(:status) %></th>
+	<th>Shutoff time</th>
+	<th><%=t '.actions', :default => t("helpers.actions") %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @entitlements.each do |entitlement| %>
+      <% if entitlement.account_id == current_user.account.id %>
+      <!-- AWS KEY REQUIRED -->
+      <%# @instance = AWS::EC2.new.instances[entitlement.instance_id] %>
+      <!-- DONE -->
+      <tr>
+	<td><%= link_to entitlement.name, entitlement_path(entitlement) %></td>
+	<!-- AWS KEY REQUIRED -->
+	<% if false %>
+	<td><%= @instance.ip_address %></td>
+	<td><%= @instance.status %></td>
+	<% end %>
+	<!-- TESTING - NO KEY -->
+	<td><%= entitlement.ip_address %></td>
+	<td><%= entitlement.status %></td>
+	<!-- DONE -->
+	<td>
+	  <% if entitlement.shutoff? %>
+	  <%= entitlement.shutoff.in_time_zone("Eastern Time (US & Canada)").strftime("%H:%M") %>
+	  <!-- AWS KEY REQUIRED -->
+	  <%# if @instance.status.to_s != "stopped" %> 
+	  <!-- TESTING - NO KEY -->
+	  <% if entitlement.status != "stopped" %>
+	  <!-- DONE -->
+	  <%= link_to image_tag("clock_plus_small.png"),
+	      {controller: "entitlements", action: "increment_runtime", id: entitlement.id},
+	      class: "btn-mini btn btn-success"  %>
+	  <%= link_to image_tag("clock_minus_small.png"),
+	      {controller: "entitlements", action: "decrement_runtime", id: entitlement.id},
+	      class: "btn-mini btn btn-danger"  %>
+	  <% end %> 
+	  <% end %>
+	</td>
+	<td>          
+	  <!-- AWS KEY REQUIRED -->
+	  <%# if @instance.status.to_s == "stopped" %> 
+	  <!-- TESTING - NO KEY -->
+	  <% if entitlement.status == "stopped" %>
+	  <!-- DONE -->
+	  <%= link_to "Start", 
+	      {controller: "entitlements", action: "start", id: entitlement.id}, 
+	      class: "btn btn-mini btn-success" %>
+	  
+	  <% else %>
+          <%= link_to "Stop", 
+	      {controller: "entitlements", action: "stop", id: entitlement.id}, 
+	      class: "btn btn-mini btn-warning"  %>
+	  <% end %>
+	  
+	  <%= link_to t('.destroy', :default => t("Destroy")), entitlement_path(entitlement),
+          :method => :delete, :data => { :confirm => t('.confirm', :default => 
+	                          t("helpers.links.confirm", :default => 'Are you sure?')) },
+          :class => 'btn btn-mini btn-danger' %>
+	</td>
+      </tr>
+      <% end %>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= link_to t('.new', :default => t("helpers.links.new")),
+            new_entitlement_path,
+            :class => 'btn btn-primary' %>
+
+</div>
+

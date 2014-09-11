@@ -1,0 +1,102 @@
+@import "twitter/bootstrap/bootstrap";
+
+body { padding-top: 40px; }
+.well { padding: 0px }
+.dl-horizontal dt, dd {
+  padding-bottom: 3px;
+}
+
+
+.navbar .nav > li > a {
+        color: #eeb111 !important;
+        text-shadow: 0 1px 0 #455560;
+}
+
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover, {
+        color: #f47b20;
+}
+
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+        color: #ffe894;
+        background-color: #0079c1;
+        -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+        -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+        box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+}
+
+.navbar .brand {
+        color: #eeb111;
+        text-shadow: 0 1px 0 #455560;
+}
+
+.btn-navbar {
+        border: 1px solid #336699 !important;
+        background-color: #3366ff;
+        background-image: -moz-linear-gradient(top, #3399ff, #336699) !important;
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3399ff), to(#336699)) !important;
+        background-image: -webkit-linear-gradient(top, #3399ff, #336699) !important;
+        background-image: -o-linear-gradient(top, #3399ff, #336699) !important;
+        background-image: linear-gradient(to bottom, #3399ff, #336699) !important;
+}
+
+.btn-navbar:hover,
+.btn-navbar:focus,
+.btn-navbar:active,
+.btn-navbar.active,
+.btn-navbar.disabled,
+.btn-navbar[disabled] {
+        background-color: #336699 !important;
+}
+
+@import "twitter/bootstrap/responsive";
+
+.btn a {
+     color: #ffffff;
+     text-decoration: none;
+}
+
+
+.page-header h1, h2 {
+    color: #455560;
+}
+
+.nav-collapse .nav > li > a:hover,
+.nav-collapse .nav > li > a:focus,
+.nav-collapse .dropdown-menu a:hover,
+.nav-collapse .dropdown-menu a:focus {
+    background-color: #336699;
+}
+
+
+// Set the correct sprite paths
+@iconSpritePath: image-url("twitter/bootstrap/glyphicons-halflings.png");
+@iconWhiteSpritePath: image-url("twitter/bootstrap/glyphicons-halflings-white.png");
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+@fontAwesomeEotPath: asset-url("fontawesome-webfont.eot");
+@fontAwesomeEotPath_iefix: asset-url("fontawesome-webfont.eot?#iefix");
+@fontAwesomeWoffPath: asset-url("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: asset-url("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: asset-url("fontawesome-webfont.svg#fontawesomeregular");
+
+// Font Awesome
+@import "fontawesome/font-awesome";
+
+// Glyphicons
+//@import "twitter/bootstrap/sprites.less";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;
+
+@navbarCollapseWidth: 768px;

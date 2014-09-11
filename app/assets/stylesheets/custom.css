@@ -1,0 +1,146 @@
+
+#wrap {
+    min-height: 800px;
+}
+
+.footer-header {
+    color: #eeb111;
+    text-shadow: 0 1px #455560;
+    padding-bottom: 15px;
+    border-bottom: solid 1px #27318b;
+}
+
+.footer-mobile {
+    margin-left: -20px;
+     width: 107% !important;
+}
+
+.footer-WVU {
+    background-image: linear-gradient(to bottom, #00447c, #336699);
+    width: 100%;
+    bottom: 0;
+}
+
+.wvu-credits a {
+    color: #eeb111;
+    text-shadow: 0 1px #455560;
+}
+
+.wvu-credits a:hover,
+.wvu-credits a:focus {
+    color: #f47b20;
+    text-shadow: 0 1px #455560;
+}
+
+.wvu-credits ul {
+    margin: 0;
+}
+
+.wvu-credits li {
+    font-size: .75em;
+    display: inline;
+}
+
+.wvu-credits li:before, .wvu-links li:before { 
+    color: #27318b;
+    content: '|'; 
+    padding-right: 3px; 
+}
+
+.wvu-credits li:first-child:before, .wvu-links li:first-child:before { 
+    content: ''; padding-right: 0; 
+}
+
+.wvu-social ul {
+    margin: 10px 0;
+    float: right;
+    list-style-type: none;
+}
+
+.wvu-social li {
+    padding: 5px;
+    float: left;
+    display: inline;
+
+}
+
+.wvu-social a {
+    height: 24px;
+    width: 24px;
+    margin: 0;
+    overflow: hidden;
+    float: left;
+    padding-left: 0;
+    padding-top: 0px;
+}
+
+.wvu-social a:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+.nav-WVU {
+    background-image: linear-gradient(to top, #00447c, #005daa);
+}
+
+.kfrank-sidebar li {
+#    border-bottom: 1px solid #ddd;
+    padding: 10px 19px;
+}
+
+.kfrank-sidebar ul {
+    margin: 0px;
+}
+
+.kfrank-sidebar h4 {
+    color: #5c6f7c;
+    text-align: center;
+}
+
+.kfrank-nav li {
+    position: fixed; 
+    right: 0; 
+    top: 0
+}
+
+.box {
+    width: 220px;
+    height: 200px;
+    margin: 40px 30px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.box img {
+    width: 220px;
+    height: 200px;
+}
+
+controls { padding-bottom: 10px; }
+
+btn-no-pads { padding 0px 4px; }
+
+ul.title-content-list > li { 
+    list-style: none; 
+    padding: 3px 0;
+    display: block;
+    height: 25px;
+}
+
+ul.title-content-list > li > div.title { 
+    float: left;
+    font-weight: bold;
+    padding-left: 8px;
+}
+
+ul.title-content-list > li > div.content { 
+    float: right;
+    padding-right: 8px;
+}
+
+.wvu-cr p {
+    color: #aabbcc;
+    font-size: .75em;
+}

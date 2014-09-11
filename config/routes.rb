@@ -1,4 +1,4 @@
-Mycloud::Application.routes.draw do
+Myloud::Application.routes.draw do
   
   get "control_panel" => 'control_panel#index'
 

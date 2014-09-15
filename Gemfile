@@ -7,7 +7,7 @@ gem 'rack', '1.4.5'
 # Use sqlite3 as the database for Active Record
 gem 'mysql2'
 gem 'sqlite3'
-
+#B-Rich comment
 group :assets do 
       # Use SCSS for stylesheets
       gem 'sass-rails', '~> 3.2.3'

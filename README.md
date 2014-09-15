@@ -1,7 +1,7 @@
 # Welcome to LCSEE myLOUD on rails
 =================================
 
-*Please see repo mycloud for old commits*
+*Please see repo [mycloud](https://webgit.lcseecloud.net/lcseesystems/mycloud) for old commits*
 
 ### Dev Environment
 

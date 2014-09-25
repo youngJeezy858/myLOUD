@@ -102,7 +102,7 @@
 .kfrank-nav li {
     position: fixed; 
     right: 0; 
-    top: 0
+    top: 0;
 }
 
 .box {
@@ -120,7 +120,7 @@
 
 controls { padding-bottom: 10px; }
 
-btn-no-pads { padding 0px 4px; }
+btn-no-pads { padding: 0px 4px; }
 
 ul.title-content-list > li { 
     list-style: none; 

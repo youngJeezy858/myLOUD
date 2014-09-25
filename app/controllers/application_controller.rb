@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
     #  end
     #end
 
-    if user.login ~= /kfrank|dmkrovich/
+    if user.login =~ /kfrank|dmkrovich/
       user.update_attributes(:admin => true)
     end
 

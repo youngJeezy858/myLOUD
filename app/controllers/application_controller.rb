@@ -1,3 +1,5 @@
+require '/usr/lib/lcsee-ldap/ldaplib'
+
 class ApplicationController < ActionController::Base
   rescue_from DeviseLdapAuthenticatable::LdapException do |exception|
     render :text => exception, :status => 500
@@ -8,17 +10,13 @@ class ApplicationController < ActionController::Base
   before_filter :authenticate_user!
 
   def after_sign_in_path_for(user)
-    #admins = getEntry("cn", "sysstaff")
-    #admins.each do |attr, values|
-    #  values.each do |value|
-    #    if value.include? "uid=#{current_user.login},"
-    #      current_user.update_attributes(:admin => true)
-    #    end
-    #  end
-    #end
-
-    if user.login =~ /kfrank|dmkrovich/
-      user.update_attributes(:admin => true)
+    admins = getEntry("cn", "sysstaff")
+    admins.each do |attr, values|
+      values.each do |value|
+        if value.include? "uid=#{current_user.login},"
+          current_user.update_attributes(:admin => true)
+        end
+      end
     end
 
     ##Edit security group

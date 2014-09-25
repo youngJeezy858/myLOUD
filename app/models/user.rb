@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   has_one :account
   accepts_nested_attributes_for :account
-  attr_accessible :account_attributes
+  attr_accessible :account_attributes, :admin
 
   after_create :create_account
 

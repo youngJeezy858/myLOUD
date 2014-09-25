@@ -21,10 +21,10 @@ authorizations: &AUTHORIZATIONS
 ## Environment
 
 development:
-  host: localhost
-  port: 3890
+  host: vpcldap.lcseecloud.net
+  port: 389
   attribute: uid
-  base: ou=People,dc=lcsee,dc=wvu,dc=edu
+  base: ou=People,dc=lcseecloud,dc=net
 #  admin_user: cn=admin,dc=test,dc=com
 #  admin_password: admin_password
   ssl: false

@@ -54,7 +54,7 @@ gem 'jquery-rails'
 
 
 gem 'devise'
-gem 'devise_ldap_authenticatable'
+gem 'devise_ldap_authenticatable', :git => "git://github.com/cschiewek/devise_ldap_authenticatable.git"
 gem 'aws-sdk'
 gem 'psych'
 gem 'high_voltage'

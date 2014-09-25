@@ -23,4 +23,4 @@ production:
   database: myloud_production
   host: db.lcseecloud.net
   username: myloud_role
-  
+  password: muffin  

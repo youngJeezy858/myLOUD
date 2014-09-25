@@ -44,8 +44,8 @@ production:
   host: 10.0.0.11
   port: 389
   attribute: uid
-  base: ou=People,dc=lcseecloud,dc=net
-  admin_user: cn=admin,dc=test,dc=com
-  admin_password: admin_password
-  ssl: start_tls
+  base: ou=people,dc=lcseecloud,dc=net
+  # admin_user: cn=admin,dc=test,dc=com
+  # admin_password: admin_password
+  ssl: false
   # <<: *AUTHORIZATIONS

@@ -1,5 +1,5 @@
 class AccountsController < ApplicationController
-  before_action :set_account, only: [:show, :edit, :update, :destroy]
+  before_filter :set_account, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate
 
   def new 

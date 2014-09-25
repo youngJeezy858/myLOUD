@@ -1,5 +1,5 @@
 class EntitlementsController < ApplicationController
-  before_action :set_entitlement, :set_ip, only: [:show, :edit, :update, :destroy, :admin_destroy, :admin_start, :admin_stop, :start, :stop, :reboot, :increment_runtime, :decrement_runtime]
+  before_filter :set_entitlement, :set_ip, only: [:show, :edit, :update, :destroy, :admin_destroy, :admin_start, :admin_stop, :start, :stop, :reboot, :increment_runtime, :decrement_runtime]
   before_filter :authenticate, :except => [:index, :show, :new, :create, :destroy, :start, :stop, :increment_runtime, :decrement_runtime]
   
   # GET /entitlements

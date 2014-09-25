@@ -19,7 +19,10 @@ class ApplicationController < ActionController::Base
       end
     end
 
-    ##Edit security group
+=begin
+   Edit user's security group
+Comment this block if testing.
+=end
     ec2 = AWS::EC2.new(:region => "us-west-2")
     if current_user.account.security_group_id.blank?
       group = ec2.security_groups.create(current_user.login, {:vpc => "vpc-d932f4bc"})
@@ -33,6 +36,7 @@ class ApplicationController < ActionController::Base
     end
     group.authorize_ingress(:tcp, 22, "#{current_user.current_sign_in_ip}/32")
     super    
+
   end  
 
 end

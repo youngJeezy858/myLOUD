@@ -1,6 +1,7 @@
 Myloud::Application.routes.draw do
   
   get "control_panel" => 'control_panel#index'
+  get "download_key" => 'control_panel#download_key'
 
   resources :accounts
   resources :clouds do

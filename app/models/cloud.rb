@@ -13,16 +13,14 @@ class Cloud < ActiveRecord::Base
     end
     
     self.turn_off_at = DateTime.now + 2.hours
-    self.subnet_id = "subnet-379e6c40"
+    self.subnet_id = "subnet-aa7484dd"
     
-#    ec2 = AWS::EC2.new(:ec2_endpoint => 'ec2.us-west-2.amazonaws.com')
     ec2 = AWS::EC2.new(:region => "us-west-2")
     instance = ec2.instances.create(
       :image_id => ami_id,
       :security_group_ids => sg_id,
       :instance_type => "t2.micro",
       :subnet => subnet_id,
-#      :availability_zone => "us-west-2a",
       :associate_public_ip_address => true )
 
     self.instance_id = instance.id

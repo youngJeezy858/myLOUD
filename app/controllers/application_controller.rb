@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
     ##Edit security group
     ec2 = AWS::EC2.new(:region => "us-west-2")
     if current_user.account.security_group_id.blank?
-      group = ec2.security_groups.create(current_user.login, {:vpc => "vpc-42844427"})
+      group = ec2.security_groups.create(current_user.login, {:vpc => "vpc-d932f4bc"})
       current_user.account.update_attributes(:security_group_id => group.id)
       group.revoke_egress('0.0.0.0/0')
       group.authorize_egress('0.0.0.0/0', :protocol => :tcp, :ports => 80..80)

@@ -55,7 +55,7 @@ class AmisController < ApplicationController
   private
   # Never trust parameters from the scary internet, only allow the white list through.
     def ami_params
-      params.require(:ami).permit(:imageId, :name, :description)
+      params.require(:ami).permit(:imageId, :name, :description, :size)
     end
     
     def authenticate_admin

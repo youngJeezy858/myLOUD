@@ -1,5 +1,5 @@
 class Ami < ActiveRecord::Base
-  attr_accessible :imageId, :name, :description
+  attr_accessible :imageId, :name, :description, :size
 
   validates_uniqueness_of :name
   validate :unique_ami_id

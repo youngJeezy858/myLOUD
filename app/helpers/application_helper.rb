@@ -14,7 +14,7 @@ module ApplicationHelper
   end
 
   def format_turn_off_at(time)
-    time.strftime("%l:%H %P")
+    time.strftime("%l:%M %p")
   end
 
   def get_instance(id)

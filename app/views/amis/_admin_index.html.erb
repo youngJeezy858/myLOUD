@@ -1,66 +1,42 @@
 <div class="row">
   <h3>AMIs</h3>
+  <%= render 'amis/form' %>
+</div>
 
-  <div class="span4">
-    <%= form_for(ami) do |f| %>
-    <%= render "shared/error_messages", :target => ami %>
-    <p>
-      Create an AMI through the AWS console and log the AMI ID
-      here. The name and description are arbitrary.
-    </p>
-    <div class="controls">
-      <%= f.label :name %>
-      <div class="control-group">
-        <%= f.text_field :name %>
-      </div>
-    </div>
-    <div class="controls">
-      <%= f.label "AMI ID" %>
-      <div class="control-group">
-        <%= f.text_field :imageId %>
-      </div>
-    </div>
-    <div class="controls">
-      <%= f.label :description %>
-      <div class="control-group">
-        <%= f.text_area :description, :style => 'height: 100px' %>
-      </div>
-    </div>
-    <%= f.submit 'Create AMI', :class => 'btn btn-primary' %>
-    <% end %>
-  </div>
-
-  <div class="offset1 span7">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>AMI ID</th>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <% amis.each do |a| %>
-        <tr>
-          <td><%= a.name %></td>
-          <td><%= a.imageId %></td>
-          <td><%= link_to "Show", ami_path(a), class: 'btn btn-mini' %></td>
-          <td><%= link_to "Edit", edit_ami_path(a), class: 'btn btn-mini' %></td>
-          <td><%= link_to "Remove", ami_path(a), method: :delete,
-                  class: 'btn btn-mini btn-danger' %></td>
-        </tr>
-        <tr>
-          <th>Description:</th>
-          <td><%= a.description %></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <% end %>
-      </tbody>
-    </table>
-  </div>
+<div class="row">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>AMI ID</th>
+        <th>Size</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% amis.each do |ami| %>
+      <tr>
+        <td><%= ami.name %></td>
+        <td><%= ami.imageId %></td>
+        <td><%= ami.size %></td>
+        <td><%= link_to "Show", ami, class: 'btn btn-mini' %></td>
+        <td><%= link_to "Edit", edit_ami_path(ami), class: 'btn btn-mini' %></td>
+        <td><%= link_to "Remove", ami, method: :delete,
+                class: 'btn btn-mini btn-danger' %></td>
+      </tr>
+      <tr>
+        <th>Description:</th>
+        <td><%= ami.description %></td>
+        <td></td>
+	<td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
 </div>

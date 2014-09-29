@@ -2794,3 +2794,2466 @@ Processing by ControlPanelController#index as HTML
   Rendered shared/_desktop_footer.html.erb (0.0ms)
   Rendered shared/_mobile_footer.html.erb (0.0ms)
 Completed 200 OK in 97.0ms (Views: 94.3ms | ActiveRecord: 0.9ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateEntitlements (20140423191316)
+Migrating to DeviseCreateUsers (20140428162354)
+Migrating to AddAdminToUsers (20140430160310)
+Migrating to CreateAccounts (20140430182857)
+Migrating to CreateAmis (20140604220223)
+Migrating to AddSecurityGroupIdToEntitlement (20140606190057)
+Migrating to CreateClouds (20140808205635)
+Migrating to AddSecurityGroupIdToAccount (20140808210308)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateEntitlements (20140423191316)
+Migrating to DeviseCreateUsers (20140428162354)
+Migrating to AddAdminToUsers (20140430160310)
+Migrating to CreateAccounts (20140430182857)
+Migrating to CreateAmis (20140604220223)
+Migrating to AddSecurityGroupIdToEntitlement (20140606190057)
+Migrating to CreateClouds (20140808205635)
+Migrating to AddSecurityGroupIdToAccount (20140808210308)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-29 14:53:19 -0400
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 4.2ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-09-29 14:53:19 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.3ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+  Rendered shared/_desktop_footer.html.erb (0.2ms)
+  Rendered shared/_mobile_footer.html.erb (0.2ms)
+Completed 200 OK in 154.1ms (Views: 95.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 14:53:19 -0400
+Served asset /application.css - 200 OK (15ms)
+
+
+Started GET "/assets/admin_tools.css?body=1" for 127.0.0.1 at 2014-09-29 14:53:19 -0400
+Served asset /admin_tools.css - 200 OK (20ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /accounts.css - 200 OK (1ms)
+
+
+Started GET "/assets/clouds.css?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /clouds.css - 200 OK (2ms)
+
+
+Started GET "/assets/control_panel.css?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /control_panel.css - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /bootstrap_and_overrides.css - 200 OK (6ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /custom.css - 200 OK (2ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /welcome.css - 200 OK (4ms)
+
+
+Started GET "/assets/wvu.css?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /wvu.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /jquery.js - 200 OK (104ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /jquery_ujs.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /twitter/bootstrap.js - 200 OK (19ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /turbolinks.js - 200 OK (2ms)
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /accounts.js - 200 OK (3ms)
+
+
+Started GET "/assets/admin_tools.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /admin_tools.js - 200 OK (1ms)
+
+
+Started GET "/assets/amis.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /amis.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/clouds.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /clouds.js - 200 OK (2ms)
+
+
+Started GET "/assets/control_panel.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /control_panel.js - 200 OK (1ms)
+
+
+Started GET "/assets/entitlements.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /entitlements.js - 200 OK (1ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /welcome.js - 200 OK (24ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /application.js - 200 OK (20ms)
+
+
+Started GET "/assets/mycloud.png" for 127.0.0.1 at 2014-09-29 14:53:20 -0400
+Served asset /mycloud.png - 200 OK (1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-09-29 14:53:24 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"84otg7Yv13YIqwDj9WenAsz0RrieBUGRbmx2XoRHG3c=", "user"=>{"login"=>"kfrank", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'kfrank' LIMIT 1[0m
+  [36mLDAP:[0m LDAP dn lookup: uid=kfrank
+  [36mLDAP:[0m LDAP search for login: uid=kfrank
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user uid=kfrank,ou=People,dc=lcseecloud,dc=net
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2014-09-25 12:16:31.000000', "current_sign_in_at" = '2014-09-29 14:53:24.157383', "sign_in_count" = 8, "updated_at" = '2014-09-29 14:53:24.163028' WHERE "users"."id" = 1[0m
+  [1m[35m (100.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 1364.6ms
+
+AWS::Errors::MissingCredentialsError (
+Missing Credentials.
+
+Unable to find AWS credentials.  You can configure your AWS credentials
+a few different ways:
+
+* Call AWS.config with :access_key_id and :secret_access_key
+
+* Export AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY to ENV
+
+* On EC2 you can run instances with an IAM instance profile and credentials
+  will be auto loaded from the instance metadata service on those
+  instances.
+
+* Call AWS.config with :credential_provider.  A credential provider should
+  either include AWS::Core::CredentialProviders::Provider or respond to
+  the same public methods.
+
+= Ruby on Rails
+
+In a Ruby on Rails application you may also specify your credentials in
+the following ways:
+
+* Via a config initializer script using any of the methods mentioned above
+  (e.g. RAILS_ROOT/config/initializers/aws-sdk.rb).
+
+* Via a yaml configuration file located at RAILS_ROOT/config/aws.yml.
+  This file should be formated like the default RAILS_ROOT/config/database.yml
+  file.
+
+):
+  app/controllers/application_controller.rb:28:in `after_sign_in_path_for'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-09-29 14:56:01 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (28.8ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+  Rendered shared/_desktop_footer.html.erb (0.2ms)
+  Rendered shared/_mobile_footer.html.erb (0.2ms)
+Completed 200 OK in 160.7ms (Views: 85.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /accounts.css - 304 Not Modified (21ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admin_tools.css?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /admin_tools.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/clouds.css?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /clouds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/control_panel.css?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /control_panel.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /custom.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /welcome.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/wvu.css?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /wvu.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /twitter/bootstrap.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /turbolinks.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /accounts.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/amis.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /amis.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin_tools.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /admin_tools.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/clouds.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /clouds.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/control_panel.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /control_panel.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /welcome.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/entitlements.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /entitlements.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /application.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/mycloud.png" for 127.0.0.1 at 2014-09-29 14:56:02 -0400
+Served asset /mycloud.png - 304 Not Modified (1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-09-29 14:56:07 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"84otg7Yv13YIqwDj9WenAsz0RrieBUGRbmx2XoRHG3c=", "user"=>{"login"=>"kfrank", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'kfrank' LIMIT 1[0m
+  [36mLDAP:[0m LDAP dn lookup: uid=kfrank
+  [36mLDAP:[0m LDAP search for login: uid=kfrank
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user uid=kfrank,ou=People,dc=lcseecloud,dc=net
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2014-09-29 10:53:24.000000', "current_sign_in_at" = '2014-09-29 14:56:07.538279', "sign_in_count" = 9, "updated_at" = '2014-09-29 14:56:07.543926' WHERE "users"."id" = 1[0m
+  [1m[35m (106.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = 1 LIMIT 1[0m
+[AWS EC2 401 1.649813 1 retries] create_security_group(:description=>"kfrank",:group_name=>"kfrank",:vpc_id=>"vpc-d932f4bc") AWS::EC2::Errors::AuthFailure AWS was not able to validate the provided access credentials
+
+Completed 500 Internal Server Error in 2966.4ms
+
+AWS::EC2::Errors::AuthFailure (AWS was not able to validate the provided access credentials):
+  app/controllers/application_controller.rb:28:in `after_sign_in_path_for'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.9ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-29 15:35:09 -0400
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 3.9ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-09-29 15:35:09 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (24.6ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+  Rendered shared/_desktop_footer.html.erb (0.2ms)
+  Rendered shared/_mobile_footer.html.erb (0.2ms)
+Completed 200 OK in 151.6ms (Views: 78.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /accounts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/control_panel.css?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /control_panel.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/admin_tools.css?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /admin_tools.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/clouds.css?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /clouds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /welcome.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/wvu.css?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /wvu.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /twitter/bootstrap.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /turbolinks.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /accounts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin_tools.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /admin_tools.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/amis.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /amis.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/control_panel.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /control_panel.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/clouds.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /clouds.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/entitlements.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /entitlements.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /welcome.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /application.js - 304 Not Modified (37ms)
+
+
+Started GET "/assets/mycloud.png" for 127.0.0.1 at 2014-09-29 15:35:10 -0400
+Served asset /mycloud.png - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-09-29 15:35:15 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"84otg7Yv13YIqwDj9WenAsz0RrieBUGRbmx2XoRHG3c=", "user"=>{"login"=>"kfrank", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'kfrank' LIMIT 1[0m
+  [36mLDAP:[0m LDAP dn lookup: uid=kfrank
+  [36mLDAP:[0m LDAP search for login: uid=kfrank
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user uid=kfrank,ou=People,dc=lcseecloud,dc=net
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.2ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2014-09-29 10:56:07.000000', "current_sign_in_at" = '2014-09-29 15:35:15.999459', "sign_in_count" = 10, "updated_at" = '2014-09-29 15:35:16.003465' WHERE "users"."id" = 1[0m
+  [1m[35m (97.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = 1 LIMIT 1[0m
+[AWS EC2 401 0.847206 1 retries] create_security_group(:description=>"kfrank",:group_name=>"kfrank",:vpc_id=>"vpc-d932f4bc") AWS::EC2::Errors::AuthFailure AWS was not able to validate the provided access credentials
+
+Completed 500 Internal Server Error in 2370.5ms
+
+AWS::EC2::Errors::AuthFailure (AWS was not able to validate the provided access credentials):
+  app/controllers/application_controller.rb:28:in `after_sign_in_path_for'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.3ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (30.4ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+  Rendered shared/_desktop_footer.html.erb (0.2ms)
+  Rendered shared/_mobile_footer.html.erb (0.2ms)
+Completed 200 OK in 158.3ms (Views: 85.0ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /accounts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin_tools.css?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /admin_tools.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/control_panel.css?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /control_panel.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/clouds.css?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /clouds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /welcome.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/wvu.css?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /wvu.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:36 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:37 -0400
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:37 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:37 -0400
+Served asset /turbolinks.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:37 -0400
+Served asset /twitter/bootstrap.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:37 -0400
+Served asset /accounts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin_tools.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:37 -0400
+Served asset /admin_tools.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/amis.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:37 -0400
+Served asset /amis.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/clouds.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:37 -0400
+Served asset /clouds.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:37 -0400
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/control_panel.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:37 -0400
+Served asset /control_panel.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/entitlements.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:37 -0400
+Served asset /entitlements.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:37 -0400
+Served asset /welcome.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 15:37:37 -0400
+Served asset /application.js - 304 Not Modified (40ms)
+
+
+Started GET "/assets/mycloud.png" for 127.0.0.1 at 2014-09-29 15:37:37 -0400
+Served asset /mycloud.png - 304 Not Modified (1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-09-29 15:37:42 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"84otg7Yv13YIqwDj9WenAsz0RrieBUGRbmx2XoRHG3c=", "user"=>{"login"=>"kfrank", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'kfrank' LIMIT 1[0m
+  [36mLDAP:[0m LDAP dn lookup: uid=kfrank
+  [36mLDAP:[0m LDAP search for login: uid=kfrank
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user uid=kfrank,ou=People,dc=lcseecloud,dc=net
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2014-09-29 11:35:15.000000', "current_sign_in_at" = '2014-09-29 15:37:42.603725', "sign_in_count" = 11, "updated_at" = '2014-09-29 15:37:42.609567' WHERE "users"."id" = 1[0m
+  [1m[35m (97.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = 1 LIMIT 1[0m
+[AWS EC2 400 0.731143 0 retries] create_security_group(:description=>"kfrank",:group_name=>"kfrank",:vpc_id=>"vpc-d932f4bc") AWS::EC2::Errors::InvalidVpcID::NotFound The vpc ID 'vpc-d932f4bc' does not exist
+
+Completed 500 Internal Server Error in 2016.2ms
+
+AWS::EC2::Errors::InvalidVpcID::NotFound (The vpc ID 'vpc-d932f4bc' does not exist):
+  app/controllers/application_controller.rb:28:in `after_sign_in_path_for'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.9ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-29 15:55:49 -0400
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 19.9ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-09-29 15:55:49 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (23.0ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+  Rendered shared/_desktop_footer.html.erb (0.3ms)
+  Rendered shared/_mobile_footer.html.erb (0.3ms)
+Completed 200 OK in 155.7ms (Views: 95.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /accounts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin_tools.css?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /admin_tools.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/clouds.css?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /clouds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/control_panel.css?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /control_panel.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /welcome.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/wvu.css?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /wvu.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /twitter/bootstrap.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /accounts.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /turbolinks.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin_tools.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /admin_tools.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/amis.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /amis.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/clouds.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /clouds.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/control_panel.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /control_panel.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/entitlements.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /entitlements.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /welcome.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 15:55:50 -0400
+Served asset /application.js - 304 Not Modified (21ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-09-29 15:55:56 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"84otg7Yv13YIqwDj9WenAsz0RrieBUGRbmx2XoRHG3c=", "user"=>{"login"=>"kfrank", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'kfrank' LIMIT 1[0m
+  [36mLDAP:[0m LDAP dn lookup: uid=kfrank
+  [36mLDAP:[0m LDAP search for login: uid=kfrank
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user uid=kfrank,ou=People,dc=lcseecloud,dc=net
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.0ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2014-09-29 11:37:42.000000', "current_sign_in_at" = '2014-09-29 15:55:56.166860', "sign_in_count" = 12, "updated_at" = '2014-09-29 15:55:56.172499' WHERE "users"."id" = 1[0m
+  [1m[35m (86.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Completed 500 Internal Server Error in 310.7ms
+
+TypeError ({"vpc"=>"vpc-42844427", "subnet"=>"subnet-379e6c40"} is not a class/module):
+  app/controllers/application_controller.rb:26:in `after_sign_in_path_for'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (28.3ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+  Rendered shared/_desktop_footer.html.erb (0.2ms)
+  Rendered shared/_mobile_footer.html.erb (0.2ms)
+Completed 200 OK in 157.5ms (Views: 84.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /accounts.css - 304 Not Modified (21ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/control_panel.css?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /control_panel.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/clouds.css?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /clouds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin_tools.css?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /admin_tools.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /custom.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /welcome.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/wvu.css?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /wvu.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /twitter/bootstrap.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /accounts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:23 -0400
+Served asset /turbolinks.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin_tools.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:24 -0400
+Served asset /admin_tools.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/amis.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:24 -0400
+Served asset /amis.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:24 -0400
+Served asset /bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/clouds.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:24 -0400
+Served asset /clouds.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/control_panel.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:24 -0400
+Served asset /control_panel.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:24 -0400
+Served asset /welcome.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:24 -0400
+Served asset /application.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/entitlements.js?body=1" for 127.0.0.1 at 2014-09-29 15:57:24 -0400
+Served asset /entitlements.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/mycloud.png" for 127.0.0.1 at 2014-09-29 15:57:24 -0400
+Served asset /mycloud.png - 304 Not Modified (1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-09-29 15:57:29 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"84otg7Yv13YIqwDj9WenAsz0RrieBUGRbmx2XoRHG3c=", "user"=>{"login"=>"kfrank", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'kfrank' LIMIT 1[0m
+  [36mLDAP:[0m LDAP dn lookup: uid=kfrank
+  [36mLDAP:[0m LDAP search for login: uid=kfrank
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user uid=kfrank,ou=People,dc=lcseecloud,dc=net
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.9ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2014-09-29 11:55:56.000000', "current_sign_in_at" = '2014-09-29 15:57:29.503277', "sign_in_count" = 13, "updated_at" = '2014-09-29 15:57:29.508921' WHERE "users"."id" = 1[0m
+  [1m[35m (106.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = 1 LIMIT 1[0m
+[AWS EC2 400 0.798159 0 retries] create_security_group(:description=>"kfrank",:group_name=>"kfrank",:vpc_id=>"vpc-42844427") AWS::EC2::Errors::InvalidGroup::Duplicate The security group 'kfrank' already exists for VPC 'vpc-42844427'
+
+Completed 500 Internal Server Error in 2075.3ms
+
+AWS::EC2::Errors::InvalidGroup::Duplicate (The security group 'kfrank' already exists for VPC 'vpc-42844427'):
+  app/controllers/application_controller.rb:28:in `after_sign_in_path_for'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-09-29 15:58:28 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"84otg7Yv13YIqwDj9WenAsz0RrieBUGRbmx2XoRHG3c=", "user"=>{"login"=>"kfrank", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'kfrank' LIMIT 1
+  [36mLDAP:[0m LDAP dn lookup: uid=kfrank
+  [36mLDAP:[0m LDAP search for login: uid=kfrank
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user uid=kfrank,ou=People,dc=lcseecloud,dc=net
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2014-09-29 11:57:29.000000', "current_sign_in_at" = '2014-09-29 15:58:28.231992', "sign_in_count" = 14, "updated_at" = '2014-09-29 15:58:28.233303' WHERE "users"."id" = 1
+  [1m[36m (101.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = 1 LIMIT 1
+[AWS EC2 200 0.483785 0 retries] create_security_group(:description=>"kfrank",:group_name=>"kfrank",:vpc_id=>"vpc-42844427")  
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "accounts" SET "security_group_id" = 'sg-d7f964b2', "updated_at" = '2014-09-29 15:58:28.936203' WHERE "accounts"."id" = 1
+  [1m[36m (124.1ms)[0m  [1mcommit transaction[0m
+[AWS EC2 200 0.247043 0 retries] revoke_security_group_egress(:group_id=>"sg-d7f964b2",:ip_permissions=>[{:ip_protocol=>"-1",:ip_ranges=>[{:cidr_ip=>"0.0.0.0/0"}]}])  
+
+[AWS EC2 200 0.220016 0 retries] authorize_security_group_egress(:group_id=>"sg-d7f964b2",:ip_permissions=>[{:from_port=>80,:ip_protocol=>"tcp",:ip_ranges=>[{:cidr_ip=>"0.0.0.0/0"}],:to_port=>80}])  
+
+[AWS EC2 200 0.268529 0 retries] authorize_security_group_egress(:group_id=>"sg-d7f964b2",:ip_permissions=>[{:from_port=>443,:ip_protocol=>"tcp",:ip_ranges=>[{:cidr_ip=>"0.0.0.0/0"}],:to_port=>443}])  
+
+[AWS EC2 200 0.368697 0 retries] authorize_security_group_ingress(:group_id=>"sg-d7f964b2",:ip_permissions=>[{:from_port=>22,:ip_protocol=>"tcp",:ip_ranges=>[{:cidr_ip=>"127.0.0.1/32"}],:to_port=>22}])  
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 2037.9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+  Rendered shared/_desktop_footer.html.erb (0.0ms)
+  Rendered shared/_mobile_footer.html.erb (0.0ms)
+Completed 200 OK in 12.5ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admin_tools.css?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /admin_tools.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clouds.css?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /clouds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control_panel.css?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /control_panel.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /accounts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /welcome.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/wvu.css?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /wvu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /turbolinks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /accounts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin_tools.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /admin_tools.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/amis.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /amis.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clouds.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /clouds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control_panel.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /control_panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entitlements.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /entitlements.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 15:58:30 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/control_panel" for 127.0.0.1 at 2014-09-29 15:58:34 -0400
+Processing by ControlPanelController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = 1 LIMIT 1
+  [1m[36mCloud Load (0.1ms)[0m  [1mSELECT "clouds".* FROM "clouds" WHERE "clouds"."account_id" = 1[0m
+  Rendered control_panel/index.html.erb within layouts/application (13.8ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+  Rendered shared/_desktop_footer.html.erb (0.0ms)
+  Rendered shared/_mobile_footer.html.erb (0.0ms)
+Completed 200 OK in 25.3ms (Views: 23.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin_tools" for 127.0.0.1 at 2014-09-29 15:58:36 -0400
+Processing by AdminToolsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mAmi Load (0.1ms)[0m  [1mSELECT "amis".* FROM "amis" [0m
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered amis/_admin_index.html.erb (3.2ms)
+  Rendered admin_tools/index.html.erb within layouts/application (4.3ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+  Rendered shared/_desktop_footer.html.erb (0.0ms)
+  Rendered shared/_mobile_footer.html.erb (0.0ms)
+Completed 200 OK in 21.3ms (Views: 13.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/control_panel" for 127.0.0.1 at 2014-09-29 15:58:37 -0400
+Processing by ControlPanelController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = 1 LIMIT 1[0m
+  [1m[35mCloud Load (0.1ms)[0m  SELECT "clouds".* FROM "clouds" WHERE "clouds"."account_id" = 1
+  Rendered control_panel/index.html.erb within layouts/application (2.1ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+  Rendered shared/_desktop_footer.html.erb (0.0ms)
+  Rendered shared/_mobile_footer.html.erb (0.0ms)
+Completed 200 OK in 15.3ms (Views: 13.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin_tools" for 127.0.0.1 at 2014-09-29 15:58:39 -0400
+Processing by AdminToolsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mAmi Load (0.1ms)[0m  SELECT "amis".* FROM "amis" 
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered amis/_admin_index.html.erb (2.5ms)
+  Rendered admin_tools/index.html.erb within layouts/application (3.5ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+  Rendered shared/_desktop_footer.html.erb (0.0ms)
+  Rendered shared/_mobile_footer.html.erb (0.0ms)
+Completed 200 OK in 15.0ms (Views: 13.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/amis" for 127.0.0.1 at 2014-09-29 15:59:16 -0400
+Processing by AmisController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"58iTxd96Gk+nSTNWBePOFuvjsOdHBkXTWdoxA6scZjk=", "ami"=>{"name"=>"Ubuntu", "imageId"=>"ami-8786c6b7", "description"=>"stock ubuntu"}, "commit"=>"Create AMI"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAmi Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "amis" WHERE "amis"."name" = 'Ubuntu' LIMIT 1[0m
+[AWS EC2 200 0.438629 0 retries] describe_images(:filters=>[{:name=>"image-id",:values=>["ami-8786c6b7"]}])  
+
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "amis" ("created_at", "description", "imageId", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Mon, 29 Sep 2014 15:59:17 EDT -04:00], ["description", "stock ubuntu"], ["imageId", "ami-8786c6b7"], ["name", "Ubuntu"], ["updated_at", Mon, 29 Sep 2014 15:59:17 EDT -04:00]]
+  [1m[36m (87.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/amis/1
+Completed 302 Found in 685.5ms (ActiveRecord: 88.7ms)
+
+
+Started GET "/amis/1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Processing by AmisController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mAmi Load (0.1ms)[0m  [1mSELECT "amis".* FROM "amis" WHERE "amis"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered amis/show.html.erb within layouts/application (1.4ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+  Rendered shared/_desktop_footer.html.erb (0.0ms)
+  Rendered shared/_mobile_footer.html.erb (0.0ms)
+Completed 200 OK in 15.1ms (Views: 12.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/admin_tools.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /admin_tools.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /accounts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/control_panel.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /control_panel.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clouds.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /clouds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /welcome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/wvu.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /wvu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /turbolinks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /accounts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/amis.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /amis.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin_tools.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /admin_tools.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/clouds.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /clouds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control_panel.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /control_panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entitlements.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /entitlements.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:17 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin_tools" for 127.0.0.1 at 2014-09-29 15:59:19 -0400
+Processing by AdminToolsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mAmi Load (0.1ms)[0m  [1mSELECT "amis".* FROM "amis" [0m
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered amis/_admin_index.html.erb (3.0ms)
+  Rendered admin_tools/index.html.erb within layouts/application (4.1ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+  Rendered shared/_desktop_footer.html.erb (0.0ms)
+  Rendered shared/_mobile_footer.html.erb (0.0ms)
+Completed 200 OK in 16.7ms (Views: 14.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/control_panel" for 127.0.0.1 at 2014-09-29 15:59:23 -0400
+Processing by ControlPanelController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = 1 LIMIT 1[0m
+  [1m[35mCloud Load (0.1ms)[0m  SELECT "clouds".* FROM "clouds" WHERE "clouds"."account_id" = 1
+  Rendered control_panel/index.html.erb within layouts/application (2.0ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+  Rendered shared/_desktop_footer.html.erb (0.0ms)
+  Rendered shared/_mobile_footer.html.erb (0.0ms)
+Completed 200 OK in 14.4ms (Views: 12.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/clouds/new" for 127.0.0.1 at 2014-09-29 15:59:24 -0400
+Processing by CloudsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mAmi Load (0.1ms)[0m  SELECT "amis".* FROM "amis" 
+  Rendered clouds/new.html.erb within layouts/application (1.8ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+  Rendered shared/_desktop_footer.html.erb (0.0ms)
+  Rendered shared/_mobile_footer.html.erb (0.0ms)
+Completed 200 OK in 60.4ms (Views: 51.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/clouds" for 127.0.0.1 at 2014-09-29 15:59:26 -0400
+Processing by CloudsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"58iTxd96Gk+nSTNWBePOFuvjsOdHBkXTWdoxA6scZjk=", "cloud"=>{"ami_id"=>"ami-8786c6b7"}, "commit"=>"Create"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "clouds" WHERE "clouds"."account_id" = 1[0m
+  [1m[35mAmi Load (0.1ms)[0m  SELECT "amis".* FROM "amis" WHERE "amis"."imageId" = 'ami-8786c6b7' LIMIT 1
+  [1m[36mCloud Load (0.1ms)[0m  [1mSELECT "clouds".* FROM "clouds" WHERE "clouds"."name" = 'Ubuntu_kfrank' LIMIT 1[0m
+[AWS EC2 200 0.983366 0 retries] run_instances(:client_token=>"9b0e000f-53af-4a1e-bb8e-eefe6f7e62c2",:image_id=>"ami-8786c6b7",:instance_type=>"t2.micro",:max_count=>1,:min_count=>1,:network_interfaces=>[{:associate_public_ip_address=>true,:device_index=>0,:groups=>["sg-d7f964b2"],:subnet_id=>"subnet-379e6c40"}])  
+
+[AWS EC2 200 0.377457 0 retries] create_tags(:resources=>["i-14afa219"],:tags=>[{:key=>"Name",:value=>"Ubuntu_kfrank"}])  
+
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "clouds" ("account_id", "ami_id", "created_at", "instance_id", "name", "subnet_id", "turn_off_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["account_id", 1], ["ami_id", "ami-8786c6b7"], ["created_at", Mon, 29 Sep 2014 15:59:27 EDT -04:00], ["instance_id", "i-14afa219"], ["name", "Ubuntu_kfrank"], ["subnet_id", "subnet-379e6c40"], ["turn_off_at", Mon, 29 Sep 2014 17:59:26 EDT -04:00], ["updated_at", Mon, 29 Sep 2014 15:59:27 EDT -04:00]]
+  [1m[35m (97.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/control_panel
+Completed 302 Found in 1485.3ms (ActiveRecord: 99.8ms)
+
+
+Started GET "/control_panel" for 127.0.0.1 at 2014-09-29 15:59:28 -0400
+Processing by ControlPanelController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = 1 LIMIT 1
+  [1m[36mCloud Load (0.1ms)[0m  [1mSELECT "clouds".* FROM "clouds" WHERE "clouds"."account_id" = 1[0m
+[AWS EC2 200 0.263682 0 retries] describe_instances(:instance_ids=>["i-14afa219"])  
+
+[AWS EC2 200 0.222823 0 retries] describe_instances(:instance_ids=>["i-14afa219"])  
+
+[AWS EC2 200 0.223849 0 retries] describe_instances(:instance_ids=>["i-14afa219"])  
+
+[AWS EC2 200 0.221162 0 retries] describe_instances(:instance_ids=>["i-14afa219"])  
+
+  Rendered control_panel/_instance_actions.html.erb (675.3ms)
+  Rendered control_panel/index.html.erb within layouts/application (984.9ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+  Rendered shared/_desktop_footer.html.erb (0.0ms)
+  Rendered shared/_mobile_footer.html.erb (0.0ms)
+Completed 200 OK in 1000.5ms (Views: 998.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control_panel.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /control_panel.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin_tools.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /admin_tools.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clouds.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /clouds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /accounts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/wvu.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /wvu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /welcome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /turbolinks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /accounts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin_tools.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /admin_tools.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/amis.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /amis.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clouds.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /clouds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entitlements.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /entitlements.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control_panel.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /control_panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:29 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/control_panel" for 127.0.0.1 at 2014-09-29 15:59:52 -0400
+Processing by ControlPanelController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = 1 LIMIT 1[0m
+  [1m[35mCloud Load (0.1ms)[0m  SELECT "clouds".* FROM "clouds" WHERE "clouds"."account_id" = 1
+[AWS EC2 200 0.513841 0 retries] describe_instances(:instance_ids=>["i-14afa219"])  
+
+[AWS EC2 200 0.215739 0 retries] describe_instances(:instance_ids=>["i-14afa219"])  
+
+[AWS EC2 200 0.219508 0 retries] describe_instances(:instance_ids=>["i-14afa219"])  
+
+[AWS EC2 200 0.217004 0 retries] describe_instances(:instance_ids=>["i-14afa219"])  
+
+  Rendered control_panel/_instance_actions.html.erb (660.4ms)
+  Rendered control_panel/index.html.erb within layouts/application (1180.7ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+  Rendered shared/_desktop_footer.html.erb (0.0ms)
+  Rendered shared/_mobile_footer.html.erb (0.0ms)
+Completed 200 OK in 1195.1ms (Views: 1193.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/admin_tools.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /admin_tools.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /accounts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /welcome.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clouds.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /clouds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control_panel.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /control_panel.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/wvu.css?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /wvu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /turbolinks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /accounts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin_tools.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /admin_tools.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/amis.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /amis.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clouds.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /clouds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control_panel.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /control_panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entitlements.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /entitlements.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mycloud.png" for 127.0.0.1 at 2014-09-29 15:59:54 -0400
+Served asset /mycloud.png - 304 Not Modified (0ms)
+
+
+Started DELETE "/clouds/1" for 127.0.0.1 at 2014-09-29 16:00:00 -0400
+Processing by CloudsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"58iTxd96Gk+nSTNWBePOFuvjsOdHBkXTWdoxA6scZjk=", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCloud Load (0.2ms)[0m  SELECT "clouds".* FROM "clouds" WHERE "clouds"."id" = ? LIMIT 1  [["id", "1"]]
+[AWS EC2 200 0.666456 0 retries] terminate_instances(:instance_ids=>["i-14afa219"])  
+
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "clouds" WHERE "clouds"."id" = ?  [["id", 1]]
+  [1m[36m (98.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/control_panel
+Completed 302 Found in 772.9ms (ActiveRecord: 99.7ms)
+
+
+Started GET "/control_panel" for 127.0.0.1 at 2014-09-29 16:00:00 -0400
+Processing by ControlPanelController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = 1 LIMIT 1[0m
+  [1m[35mCloud Load (0.1ms)[0m  SELECT "clouds".* FROM "clouds" WHERE "clouds"."account_id" = 1
+  Rendered control_panel/index.html.erb within layouts/application (1.8ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+  Rendered shared/_desktop_footer.html.erb (0.0ms)
+  Rendered shared/_mobile_footer.html.erb (0.0ms)
+Completed 200 OK in 13.8ms (Views: 12.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 16:00:00 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-29 16:00:00 -0400
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control_panel.css?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /control_panel.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /accounts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clouds.css?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /clouds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin_tools.css?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /admin_tools.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /welcome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/wvu.css?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /wvu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /turbolinks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /accounts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin_tools.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /admin_tools.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/amis.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /amis.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control_panel.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /control_panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clouds.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /clouds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entitlements.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /entitlements.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 16:00:01 -0400
+Served asset /application.js - 304 Not Modified (46ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"58iTxd96Gk+nSTNWBePOFuvjsOdHBkXTWdoxA6scZjk="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 50.5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 0.7ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (1.9ms)
+  Rendered shared/_navbar.html.erb (0.6ms)
+  Rendered shared/_desktop_footer.html.erb (0.0ms)
+  Rendered shared/_mobile_footer.html.erb (0.0ms)
+Completed 200 OK in 13.9ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /accounts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin_tools.css?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /admin_tools.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clouds.css?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /clouds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control_panel.css?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /control_panel.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /welcome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/wvu.css?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /wvu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /turbolinks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /accounts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin_tools.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /admin_tools.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/amis.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /amis.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control_panel.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /control_panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clouds.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /clouds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entitlements.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /entitlements.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:24 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-09-29 16:31:29 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vHh5JS4A6nIkIedG7WLPB40E1IHHtzDayJP1R35upec=", "user"=>{"login"=>"kfrank", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'kfrank' LIMIT 1
+  [36mLDAP:[0m LDAP dn lookup: uid=kfrank
+  [36mLDAP:[0m LDAP search for login: uid=kfrank
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user uid=kfrank,ou=People,dc=lcseecloud,dc=net
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2014-09-29 11:58:28.000000', "current_sign_in_at" = '2014-09-29 16:31:29.770093', "sign_in_count" = 15, "updated_at" = '2014-09-29 16:31:29.771221' WHERE "users"."id" = 1
+  [1m[36m (88.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = 1 LIMIT 1
+[AWS EC2 200 0.532206 0 retries] revoke_security_group_ingress(:group_id=>"sg-d7f964b2",:ip_permissions=>[{:from_port=>22,:ip_protocol=>"tcp",:ip_ranges=>[{:cidr_ip=>"127.0.0.1/32"}],:to_port=>22}])  
+
+[AWS EC2 200 0.290361 0 retries] authorize_security_group_ingress(:group_id=>"sg-d7f964b2",:ip_permissions=>[{:from_port=>22,:ip_protocol=>"tcp",:ip_ranges=>[{:cidr_ip=>"127.0.0.1/32"}],:to_port=>22}])  
+
+[AWS EC2 200 0.313955 0 retries] authorize_security_group_ingress(:group_id=>"sg-d7f964b2",:ip_permissions=>[{:from_port=>3000,:ip_protocol=>"tcp",:ip_ranges=>[{:cidr_ip=>"127.0.0.1/32"}],:to_port=>3000}])  
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 1432.3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+  Rendered shared/_desktop_footer.html.erb (0.0ms)
+  Rendered shared/_mobile_footer.html.erb (0.0ms)
+Completed 200 OK in 14.8ms (Views: 13.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /accounts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin_tools.css?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /admin_tools.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clouds.css?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /clouds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control_panel.css?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /control_panel.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /welcome.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/wvu.css?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /wvu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /turbolinks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /accounts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin_tools.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /admin_tools.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/amis.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /amis.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/control_panel.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /control_panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clouds.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /clouds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entitlements.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /entitlements.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 16:31:31 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/control_panel" for 127.0.0.1 at 2014-09-29 16:31:33 -0400
+Processing by ControlPanelController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."user_id" = 1 LIMIT 1[0m
+  [1m[35mCloud Load (0.1ms)[0m  SELECT "clouds".* FROM "clouds" WHERE "clouds"."account_id" = 1
+  Rendered control_panel/index.html.erb within layouts/application (4.8ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+  Rendered shared/_desktop_footer.html.erb (0.0ms)
+  Rendered shared/_mobile_footer.html.erb (0.0ms)
+Completed 200 OK in 15.8ms (Views: 14.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin_tools" for 127.0.0.1 at 2014-09-29 16:43:32 -0400
+Processing by AdminToolsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mAmi Load (0.1ms)[0m  SELECT "amis".* FROM "amis" 
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered amis/_admin_index.html.erb (2.6ms)
+  Rendered admin_tools/index.html.erb within layouts/application (3.6ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+  Rendered shared/_desktop_footer.html.erb (0.0ms)
+  Rendered shared/_mobile_footer.html.erb (0.0ms)
+Completed 200 OK in 52.7ms (Views: 12.8ms | ActiveRecord: 0.4ms)

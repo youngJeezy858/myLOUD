@@ -25,7 +25,7 @@ Comment this block if testing.
 =end
     ec2 = AWS::EC2.new(:region => "us-west-2")
     if current_user.account.security_group_id.blank?
-      group = ec2.security_groups.create(current_user.login, {:vpc => "vpc-d932f4bc"})
+      group = ec2.security_groups.create(current_user.login, {:vpc => AWS_CONFIGS["vpc"]})
       current_user.account.update_attributes(:security_group_id => group.id)
       group.revoke_egress('0.0.0.0/0')
       group.authorize_egress('0.0.0.0/0', :protocol => :tcp, :ports => 80..80)
@@ -35,6 +35,7 @@ Comment this block if testing.
       group.revoke_ingress(:tcp, 22, "#{current_user.last_sign_in_ip}/32")
     end
     group.authorize_ingress(:tcp, 22, "#{current_user.current_sign_in_ip}/32")
+    group.authorize_ingress(:tcp, 3000, "#{current_user.current_sign_in_ip}/32")
     super    
 
   end  

@@ -1,0 +1,11 @@
+development:
+  vpc: "vpc-42844427"
+  subnet: "subnet-379e6c40" 
+
+
+production:
+  vpc: "vpc-d932f4bc"
+  subnet: "subnet-eced3589"
+
+
+test:

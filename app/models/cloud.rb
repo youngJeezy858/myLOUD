@@ -13,7 +13,7 @@ class Cloud < ActiveRecord::Base
     end
     
     self.turn_off_at = DateTime.now + 2.hours
-    self.subnet_id = "subnet-eced3589"
+    self.subnet_id = AWS_CONFIGS["subnet"]
     
     ec2 = AWS::EC2.new(:region => "us-west-2")
     instance = ec2.instances.create(

@@ -1,6 +1,6 @@
 development:
   vpc: "vpc-42844427"
-  subnet: "subnet-379e6c40" 
+  subnet: "subnet-4aeb302f" 
 
 
 production:

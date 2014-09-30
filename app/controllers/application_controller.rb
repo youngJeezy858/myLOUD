@@ -33,6 +33,7 @@ Comment this block if testing.
     else
       group = ec2.security_groups[current_user.account.security_group_id]
       group.revoke_ingress(:tcp, 22, "#{current_user.last_sign_in_ip}/32")
+      group.revoke_ingress(:tcp, 3000, "#{current_user.last_sign_in_ip}/32")
     end
     group.authorize_ingress(:tcp, 22, "#{current_user.current_sign_in_ip}/32")
     group.authorize_ingress(:tcp, 3000, "#{current_user.current_sign_in_ip}/32")

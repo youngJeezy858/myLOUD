@@ -14,7 +14,7 @@
     <% @accounts.each do |account| %>
     <tr>
       <td><%= account.user.login %></td>
-      <td><%= current_user.account.minutes / 60 %>:<%= sprintf("%.2d", current_user.account.minutes % 60) %></td>
+      <td><%= format_minutes current_user.account.minutes %></td>
       <td><%= account.instance_limit %></td>
       <td>
         <%= link_to t('.edit', :default => t("Edit Account")),
@@ -29,4 +29,6 @@
   </tbody>
 </table>
 
-<%= link_to "Back", page_path('admin'), :class => 'btn' %>
+<div class="form-actions">
+  <%= link_to "Back", admin_tools_path, :class => 'btn' %>
+</div>

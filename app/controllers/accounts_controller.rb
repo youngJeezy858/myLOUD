@@ -1,6 +1,8 @@
 class AccountsController < ApplicationController
   before_filter :set_account, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate
+  before_filter :authenticate_admin
+  layout 'admin_tools'
+  
 
   def new 
     @account = Account.new
@@ -21,7 +23,7 @@ class AccountsController < ApplicationController
   end
  
   def show
-    @entitlements = Entitlement.all
+    @account = Account.find(params[:id])
   end
 
   def update
@@ -45,8 +47,9 @@ class AccountsController < ApplicationController
     @account = Account.find(params[:id])
   end
   
-  def authenticate
-    redirect_to("/") unless current_user.admin
+  def authenticate_admin
+    redirect_to :back, 
+      notice: "You do not have permission to go to this page!" unless current_user.admin
   end
 
 end

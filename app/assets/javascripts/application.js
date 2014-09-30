@@ -16,3 +16,11 @@
 //= require turbolinks
 //= require_tree .
 
+
+$.ajax({
+    url: "/clouds/get_instance_data",
+    cache: false,
+    success: function(html){
+    $("#get-instance-data").append(html);
+    }
+  });

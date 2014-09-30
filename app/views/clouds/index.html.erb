@@ -1,2 +1,29 @@
-<h1>Clouds#index</h1>
-<p>Find me in app/views/clouds/index.html.erb</p>
+<div class="page-header">
+  <h1>cLOUDs</h1>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Owner</th>
+      <th>Name</th>
+      <th>Created At</th>
+      <th>IP Address</th>
+      <th>Status</th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clouds.each do |cloud| %>
+    <tr>
+      <td><%= cloud.account.user.login %></td>
+      <td><%= cloud.name %></td>
+      <td><%= cloud.created_at.strftime("%l:%M %p") %></td>
+      <%= render partial: 'control_panel/instance_actions',
+              :locals => { :cloud => cloud } %>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+

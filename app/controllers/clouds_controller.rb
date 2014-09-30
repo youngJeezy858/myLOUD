@@ -1,8 +1,11 @@
 class CloudsController < ApplicationController
   before_filter :check_cloud_count, :only => [:create] 
-  before_filter :authenticate_user, :only => [:start, :stop, :reboot]
+  before_filter :authenticate_user, :only => [:start, :stop, :reboot, :destroy]
+  before_filter :authenticate_admin, :only => [:index]
+  layout 'admin_tools', :only => [:index]
 
   def index
+    @clouds = Cloud.all
   end
 
   def new
@@ -55,11 +58,11 @@ class CloudsController < ApplicationController
   def reboot
     @cloud = Cloud.find(params[:id])
     @instance = AWS::EC2.new(:region => "us-west-2").instances[@cloud.instance_id]
-    @instance.start
+    @instance.reboot
     redirect_to :back,
       notice: "#{@cloud.name} successfully rebooted!"
   end
-   
+
 
   private
     def cloud_params
@@ -79,4 +82,11 @@ class CloudsController < ApplicationController
         redirect_to :back, notice: "You do not have permission to do that!"
       end
     end
+
+    def authenticate_admin
+      unless current_user.admin?
+        redirect_to :back, notice: "You do not have permission to go to that page!"
+      end
+    end
+
 end

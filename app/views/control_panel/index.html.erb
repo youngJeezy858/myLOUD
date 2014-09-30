@@ -33,7 +33,7 @@
 	  <th>Shutoff Time</th>
 	  <th>IP</th>
 	  <th>Status</th>
-	  <th></th>
+	  <th><%=t '.actions', :default => t("helpers.actions") %></th>
 	  <th></th>
 	  <th></th>
 	</tr>
@@ -44,7 +44,6 @@
 	<tr>
 	  <td><%= cloud.name %></td>
 	  <td><%= format_turn_off_at cloud.turn_off_at %></td>
-	  <td><%= get_instance_ip cloud.instance_id %></td>
 	  <%= render partial: 'instance_actions', 
 	      :locals => { :cloud => cloud } %>
 	</tr>

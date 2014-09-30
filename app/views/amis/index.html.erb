@@ -1,30 +1,34 @@
 <div class="page-header">
-  <h1>Admin Tools: AMI's</h1>
+  <h1>AMIs</h1>
 </div>
 
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Image ID</th>
       <th>Name</th>
+      <th>AMI ID</th>
+      <th>Size</th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <% @amis.each do |ami| %>
     <tr>
-      <td><%= link_to ami.imageId, ami %></td>
       <td><%= ami.name %></td>
-      <td><%= link_to t('.edit', :default => t("Edit")),
-	edit_ami_path(ami), :class => 'btn btn-mini' %></td>
-      <td>
-	<%= link_to t('.destroy', :default => t("Destroy")),
-        ami, :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-        :class => 'btn btn-mini btn-danger' %>
-      </td>
+      <td><%= ami.imageId %></td>
+      <td><%= ami.size %></td>
+      <td><%= link_to "Show", ami, class: 'btn btn-mini' %></td>
+      <td><%= link_to "Edit", edit_ami_path(ami), class: 'btn btn-mini' %></td>
+      <td><%= link_to "Remove", ami, method: :delete,
+              class: 'btn btn-mini btn-danger' %></td>
     </tr>
     <tr>
-      <td><b>Description:</b></td>
+      <th>Description:</th>
       <td><%= ami.description %></td>
+      <td></td>
+      <td></td>
       <td></td>
       <td></td>
     </tr>
@@ -32,7 +36,7 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to "New AMI", new_ami_path, :class => 'btn btn-primary' %>
-<%= link_to "Back", page_path('admin'), :class => 'btn' %>
+<div class="form-actions">
+  <%= link_to "New AMI", new_ami_path, :class => 'btn btn-primary' %>
+  <%= link_to "Back", admin_tools_path, :class => 'btn' %>
+</div>

@@ -7,64 +7,21 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Shutoff time</th>
       <th>IP Address</th>
       <th>Status</th>
-      <th>Shutoff time</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
-    <% @entitlements.each do |entitlement| %>
-    <% if entitlement.account_id == @account.id %>
-    <!-- AWS KEY REQUIRED -->
-    <%#= @instance = AWS::EC2.new.instances[entitlement.instance_id] %>
-    <!-- DONE -->
+    <% @account.clouds.each do |cloud| %>
     <tr>
-      <td><%= entitlement.name %></td>
-      <!-- AWS KEY REQUIRED --> 
-      <% if false %>
-      <td><%= @instance.ip_address %></td>
-      <td><%= @instance.status %></td>
-      <% end %>
-      <!-- TESTING - NO KEY -->
-      <td><%= entitlement.ip_address %></td>
-      <td><%= entitlement.status %></td>
-      <!-- DONE -->
-      <td>
-        <% if entitlement.shutoff? %>
-        <%= entitlement.shutoff.in_time_zone("Eastern Time (US & Canada)").strftime("%H:%M") %>
-        <% end %>
-      </td>
-      <td>
-        <%= link_to t('.edit', :default => t("helpers.links.edit")),
-        edit_entitlement_path(entitlement), :class => 'btn btn-mini' %>
-        
-	<!-- AWS KEY REQUIRED -->
-	<%# if @instance.status.to_s == "stopped" %>
-	<!-- TESTING - NO KEY -->
-	<% if entitlement.status == "stopped" %>
-	<!-- DONE -->
-        <%= link_to "Start", 
-	    {controller: "entitlements", action: "admin_start", id: entitlement.id},
-	    class: "btn btn-mini btn-success" %>
-	
-	<% else %>
-	<%= link_to "Stop", 
-	    {controller: "entitlements", action: "admin_stop", id: entitlement.id}, 
-	    class: "btn btn-mini btn-warning" %>                                           
-        <%= link_to "Reboot", 
-	    {controller: "entitlements", action: "reboot", id: entitlement.id}, 
-	    class: "btn btn-mini btn-warning" %>
-	<% end %>                                  
-        
-	<%= link_to "Destory", 
-	    {controller: "entitlements", action: "admin_destroy", id: entitlement.id}, 
-	    :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", 
-	               :default => 'Are you sure?')) }, 
-	    class: "btn btn-mini btn-danger" %>
-      </td>
+      <td><%= cloud.name %></td>
+      <td><%= format_turn_off_at cloud.turn_off_at %></td>
+      <td><%= get_instance_ip cloud.instance_id %></td>
+      <%= render partial: 'control_panel/instance_actions',
+              :locals => { :cloud => cloud } %>
     </tr>
-    <% end %>
     <% end %>
   </tbody>
 </table>

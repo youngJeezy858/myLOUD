@@ -1,5 +1,10 @@
 class AmisController < ApplicationController
   before_filter :authenticate_admin
+  layout 'admin_tools'
+
+  def index
+    @amis = Ami.all
+  end
 
   # GET /amis/1/edit
   def edit
@@ -8,6 +13,10 @@ class AmisController < ApplicationController
 
   def show
     @ami = Ami.find(params[:id])
+  end
+
+  def new
+    @ami = Ami.new
   end
 
   # POST /amis

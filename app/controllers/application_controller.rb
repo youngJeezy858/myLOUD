@@ -32,7 +32,7 @@ Comment this block if testing.
       group.authorize_egress('0.0.0.0/0', :protocol => :tcp, :ports => 443..443)
     else
       group = ec2.security_groups[current_user.account.security_group_id]
-      group.each do |rule|
+      group.ingress_ip_permissions.each do |rule|
         rule.revoke
       end
     end

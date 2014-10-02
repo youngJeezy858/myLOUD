@@ -53,6 +53,28 @@
   </div>
 </div>
 
+<div class="row">
+  <div class="span9">
+    <h4>Instructions</h4>
+    <p>
+      You will need to download the LOUD SSH key to access any of your
+      cLOUD instances.  Use that key to SSH to the IP address of your
+      cLOUD instance.  You will also need to SSH as the default user
+      of your respective Linux distro.  The default user for Ubuntu is
+      ubuntu and the user for fedora is - you guessed it - fedora.
+    </p>
+    <h4>Examples</h4>
+    <p>$ ssh -i /path/to/loud.pem ubuntu@IP_OF_UBUNTU_CLOUD</p>
+    <p>$ ssh -i /path/to/loud.pem fedora@IP_OF_FEDORA_CLOUD</p>
+    <p>
+      NOTE: you will most likely need to change the permissions of
+      your SSH key for it to work as intended.  Use the following
+      command to profit.
+    </p>
+    <p>$ chmod 600 /path/to/loud.pem</p>
+  </div>
+</div>
+
 <div class="form-actions">
   <%= link_to "Launch Cloud", new_cloud_path, :class => 'btn btn-primary' %>
   <%= link_to "Download SSH Key", download_key_path, class: 'btn' %>

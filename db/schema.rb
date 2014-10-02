@@ -44,19 +44,6 @@ ActiveRecord::Schema.define(:version => 20140929211242) do
 
   add_index "clouds", ["account_id"], :name => "index_clouds_on_account_id"
 
-  create_table "entitlements", :force => true do |t|
-    t.string   "instance_id"
-    t.string   "name"
-    t.string   "ip_address"
-    t.string   "status"
-    t.datetime "shutoff"
-    t.string   "ami"
-    t.integer  "account_id"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
-    t.string   "security_group_id"
-  end
-
   create_table "users", :force => true do |t|
     t.string   "login",                  :default => "",    :null => false
     t.string   "encrypted_password",     :default => "",    :null => false

@@ -19,25 +19,35 @@ class ApplicationController < ActionController::Base
       end
     end
 
-=begin
-   Edit user's security group
-Comment this block if testing.
-=end
     ec2 = AWS::EC2.new(:region => "us-west-2")
+    groups = ec2.security_groups
+    user_group = nil
+    user_ip = "#{current_user.current_sign_in_ip}/32"
     if current_user.account.security_group_id.blank?
-      group = ec2.security_groups.create(current_user.login, {:vpc => AWS_CONFIGS["vpc"]})
-      current_user.account.update_attributes(:security_group_id => group.id)
-      group.revoke_egress('0.0.0.0/0')
-      group.authorize_egress('0.0.0.0/0', :protocol => :tcp, :ports => 80..80)
-      group.authorize_egress('0.0.0.0/0', :protocol => :tcp, :ports => 443..443)
+      groups.each do |group|
+        if group.name == current_user.login
+          user_group = group
+          break
+        end
+      end
+        
+      user_group = groups.create(current_user.login, 
+                                 {:vpc => AWS_CONFIGS["vpc"]}) if user_group == nil
+      current_user.account.update_attributes(:security_group_id => user_group.id)
+      
+      user_group.egress_ip_permissions.each do |rule|
+        rule.revoke
+      end
+      user_group.authorize_egress('0.0.0.0/0', :protocol => :tcp, :ports => 80..80)
+      user_group.authorize_egress('0.0.0.0/0', :protocol => :tcp, :ports => 443..443)
     else
-      group = ec2.security_groups[current_user.account.security_group_id]
-      group.ingress_ip_permissions.each do |rule|
+      user_group = groups[current_user.account.security_group_id]
+      user_group.ingress_ip_permissions.each do |rule|
         rule.revoke
       end
     end
-    group.authorize_ingress(:tcp, 22, "#{current_user.current_sign_in_ip}/32")
-    group.authorize_ingress(:tcp, 3000, "#{current_user.current_sign_in_ip}/32")
+    user_group.authorize_ingress(:tcp, 22, user_ip)
+    user_group.authorize_ingress(:tcp, 3000, user_ip)
     super    
 
   end  

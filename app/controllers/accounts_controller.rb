@@ -28,8 +28,8 @@ class AccountsController < ApplicationController
 
   def update
     respond_to do |format|
-      if @account.update(account_params)
-        format.html { redirect_to @account, notice: 'Entitlement was successfully updated.' }
+      if @account.update_attributes(account_params)
+        format.html { redirect_to @account, notice: 'Account was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -39,17 +39,17 @@ class AccountsController < ApplicationController
   end
 
   private
-  def account_params
+    def account_params
       params.require(:account).permit(:minutes, :instance_limit)
-  end
+    end
 
-  def set_account
-    @account = Account.find(params[:id])
-  end
-  
-  def authenticate_admin
-    redirect_to :back, 
-      notice: "You do not have permission to go to this page!" unless current_user.admin
-  end
+    def set_account
+      @account = Account.find(params[:id])
+    end
+    
+    def authenticate_admin
+      redirect_to :back, 
+        notice: "You do not have permission to go to this page!" unless current_user.admin
+    end
 
 end

@@ -14,7 +14,11 @@ class Account < ActiveRecord::Base
   end
 
   def subtract_minutes(minutes)
-    self.minutes = self.minutes - minutes
+    if self.minutes > minutes
+      self.minutes = self.minutes - minutes
+    else
+      self.minutes = 0
+    end
     save!
   end
 

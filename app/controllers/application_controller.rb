@@ -42,9 +42,9 @@ class ApplicationController < ActionController::Base
       user_group.authorize_egress('0.0.0.0/0', :protocol => :tcp, :ports => 443..443)
     else
       user_group = groups[current_user.account.security_group_id]
-      user_group.ingress_ip_permissions.each do |rule|
-        rule.revoke
-      end
+    end
+    user_group.ingress_ip_permissions.each do |rule|
+      rule.revoke
     end
     user_group.authorize_ingress(:tcp, 22, user_ip)
     user_group.authorize_ingress(:tcp, 3000, user_ip)

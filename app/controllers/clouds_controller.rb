@@ -1,5 +1,4 @@
 class CloudsController < ApplicationController
-  before_filter :check_cloud_count, :only => [:create] 
   before_filter :authenticate_user, :only => [:start, :stop, :reboot, :destroy]
   before_filter :authenticate_admin, :only => [:index]
   layout 'admin_tools', :only => [:index]
@@ -11,16 +10,15 @@ class CloudsController < ApplicationController
 
   def new
     @cloud = Cloud.new
-    @amis = Ami.all
   end
 
 
   def create
     @cloud = current_user.account.clouds.new(cloud_params)
-    @cloud.create_instance(current_user)
 
     respond_to do |format|
       if @cloud.save
+        @cloud.create_instance(current_user)
         format.html { redirect_to control_panel_path, notice: 'Instance was successfully started.' }
       else
         format.html { render action: "new" }
@@ -74,12 +72,6 @@ class CloudsController < ApplicationController
       params.require(:cloud).permit(:ami_id)
     end
 
-    def check_cloud_count
-      @clouds = current_user.account.clouds
-      unless @clouds.nil?
-        redirect_to control_panel_path, notice: "You have reached your instance limit. Please terminate your other instances before creating a new one!" if @clouds.size >= current_user.account.instance_limit
-      end
-    end
 
     def authenticate_user
       @cloud = Cloud.find(params[:id])
@@ -87,6 +79,7 @@ class CloudsController < ApplicationController
         redirect_to :back, notice: "You do not have permission to do that!"
       end
     end
+
 
     def authenticate_admin
       unless current_user.admin?

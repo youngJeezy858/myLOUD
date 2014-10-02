@@ -32,4 +32,21 @@ module ApplicationHelper
     ec2.instances[id].ip_address
   end
 
+
+  def active_if_welcome
+    'active' if params[:controller] == 'welcome'
+  end
+
+
+  def active_if_control_panel
+    'active' if params[:controller] == 'control_panel' or
+      (['new','create'].include? params[:action] and params[:controller] == 'clouds')
+  end
+
+
+  def active_if_admin_tools
+    'active' if params[:controller] =~ /admin_tools|accounts|amis/ or 
+      (!['new','create'].include? params[:action] and params[:controller] == 'clouds')
+  end
+
 end

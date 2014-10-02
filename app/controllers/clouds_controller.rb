@@ -8,14 +8,16 @@ class CloudsController < ApplicationController
     @clouds = Cloud.all
   end
 
+
   def new
     @cloud = Cloud.new
     @amis = Ami.all
   end
 
+
   def create
     @cloud = current_user.account.clouds.new(cloud_params)
-    @cloud.create_instance(current_user.login, current_user.account.security_group_id)
+    @cloud.create_instance(current_user)
 
     respond_to do |format|
       if @cloud.save
@@ -27,11 +29,11 @@ class CloudsController < ApplicationController
     end
   end
 
+
   def destroy
     @cloud = Cloud.find(params[:id])
-    @cloud.terminate
-    @cloud.destroy
-
+    @cloud.terminate_instance(current_user)
+   
     respond_to do |format|
       format.html { redirect_to control_panel_path, 
         notice: "#{@cloud.name} has been successully destroyed"  }
@@ -39,26 +41,29 @@ class CloudsController < ApplicationController
     end
   end
 
+
   def start
     @cloud = Cloud.find(params[:id])
-    @instance = AWS::EC2.new(:region => "us-west-2").instances[@cloud.instance_id]
-    @instance.start
+    @cloud.start_instance(current_user)
+
     redirect_to :back,
       notice: "#{@cloud.name} was successfully booted!"
   end
 
+
   def stop
     @cloud = Cloud.find(params[:id])
-    @instance = AWS::EC2.new(:region => "us-west-2").instances[@cloud.instance_id]
-    @instance.stop
+    @cloud.stop_instance(current_user)
+
     redirect_to :back,
       notice: "#{@cloud.name} is shutting down!"
   end
 
+
   def reboot
     @cloud = Cloud.find(params[:id])
-    @instance = AWS::EC2.new(:region => "us-west-2").instances[@cloud.instance_id]
-    @instance.reboot
+    @cloud.reboot_instance
+
     redirect_to :back,
       notice: "#{@cloud.name} successfully rebooted!"
   end

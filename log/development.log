@@ -31511,3 +31511,16 @@ Processing by ControlPanelController#download_key as HTML
   [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
 Sent file /home/kfrank/myloud/private/loud.pem (0.1ms)
 Completed 200 OK in 1.1ms (ActiveRecord: 0.2ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateEntitlements (20140423191316)
+Migrating to DeviseCreateUsers (20140428162354)
+Migrating to AddAdminToUsers (20140430160310)
+Migrating to CreateAccounts (20140430182857)
+Migrating to CreateAmis (20140604220223)
+Migrating to AddSecurityGroupIdToEntitlement (20140606190057)
+Migrating to CreateClouds (20140808205635)
+Migrating to AddSecurityGroupIdToAccount (20140808210308)
+Migrating to AddSizeToAmi (20140929211242)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m

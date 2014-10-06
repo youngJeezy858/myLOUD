@@ -67,6 +67,13 @@ class CloudsController < ApplicationController
   end
 
 
+  def create_cloud
+    @cloud = Cloud.find(params[:id])
+    ami_id = @cloud.create_ami
+    redirect_to :back, notice: "AMI was successfully created"
+  end
+
+
   private
     def cloud_params
       params.require(:cloud).permit(:ami_id)

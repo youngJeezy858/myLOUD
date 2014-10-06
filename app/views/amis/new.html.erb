@@ -2,6 +2,8 @@
   <h1>New AMI</h1>
 </div>
 
-
-<%= render 'form' %>
-
+<% if params[:cloud_id].blank? %>
+  <%= render 'form' %>
+<% else %>
+  <%= render 'build_form' %>
+<% end %>

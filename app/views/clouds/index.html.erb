@@ -22,6 +22,8 @@
       <td><%= cloud.created_at.strftime("%l:%M %p") %></td>
       <%= render partial: 'control_panel/instance_actions',
               :locals => { :cloud => cloud } %>
+      <td><%= link_to "Create AMI", new_ami_path(cloud_id: cloud), 
+	      class: 'btn btn-mini btn-primary' %></td>
     </tr>
     <% end %>
   </tbody>

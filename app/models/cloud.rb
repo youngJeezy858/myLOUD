@@ -9,7 +9,7 @@ class Cloud < ActiveRecord::Base
     limit = self.account.instance_limit
     errors[:base] << "You have already reached your limit " + 
       "for cLOUD instances. Please terminate " + 
-      "one before starting another." if count >= limit
+      "one before starting another." if count > limit
   end
 
 

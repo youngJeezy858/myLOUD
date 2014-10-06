@@ -11,8 +11,10 @@ Myloud::Application.routes.draw do
       put 'reboot'
     end
   end
+
   resources :admin_tools
   resources :amis
+  post '/amis/build' => "amis#build", :as => :build_ami
 
   devise_for :users
 

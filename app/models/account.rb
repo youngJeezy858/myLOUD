@@ -8,9 +8,11 @@ class Account < ActiveRecord::Base
 
   def credit(turn_off_at)
     minutes_to_credit = turn_off_at.to_i - DateTime.now.to_i
-    minutes_to_credit = minutes_to_credit / 60
-    self.minutes = self.minutes + minutes_to_credit
-    save!
+    if minutes_to_credit <= 0
+      minutes_to_credit = minutes_to_credit / 60
+      self.minutes = self.minutes + minutes_to_credit
+      save!
+    end
   end
 
   def subtract_minutes(minutes)

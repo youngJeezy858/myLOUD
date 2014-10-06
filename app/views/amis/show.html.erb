@@ -9,12 +9,15 @@
   <dd><%= @ami.size %></dd>
   <dt><strong>Description:</strong></dt>
   <dd><%= @ami.description %>&nbsp;</dd>
+  <dt><strong>State:</strong></dt>
+  <dd><%= get_ami_status @ami.imageId %>&nbsp;</dd>
 </dl>
 
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
-  admin_tools_path, :class => 'btn'  %>
+  amis_path, :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
   edit_ami_path(@ami), :class => 'btn' %>
+  <%= link_to "Delete", @ami, method: 'delete', class: 'btn btn-danger' %>
 </div>

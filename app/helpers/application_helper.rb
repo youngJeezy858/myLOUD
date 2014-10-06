@@ -32,6 +32,11 @@ module ApplicationHelper
     ec2.instances[id].ip_address
   end
 
+  def get_ami_status(id)
+    ec2 = AWS::EC2.new(:region => 'us-west-2')
+    ec2.images[id].state
+  end
+
 
   def active_if_welcome
     'active' if params[:controller] == 'welcome'

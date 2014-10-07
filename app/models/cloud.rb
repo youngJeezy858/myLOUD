@@ -28,7 +28,7 @@ class Cloud < ActiveRecord::Base
       i = i + 1
     end
     
-    self.turn_off_at = DateTime.now + 2.hours
+    self.turn_off_at = DateTime.now + 2.minutes
     self.subnet_id = AWS_CONFIGS["subnet"]
     
     ec2 = AWS::EC2.new(:region => "us-west-2")
@@ -44,15 +44,15 @@ class Cloud < ActiveRecord::Base
                               { :key => 'Name', :value => "#{self.name}" }])
     save!
 
-    user.account.subtract_minutes(120)
+    user.account.subtract_minutes(2)
   end
 
 
   def start_instance(user)
     instance = AWS::EC2.new(:region => "us-west-2").instances[self.instance_id]
     instance.start
-    self.turn_off_at = DateTime.now + 2.hours
-    user.account.subtract_minutes(120)
+    self.turn_off_at = DateTime.now + 2.minutes
+    user.account.subtract_minutes(2)
   end
 
 
@@ -70,10 +70,23 @@ class Cloud < ActiveRecord::Base
 
 
   def terminate_instance(user)
+    self.terminate
+    user.account.credit(self.turn_off_at)
+  end
+
+
+  def self.terminate_idle
+    clouds = where("turn_off_at < ?", DateTime.now)
+    clouds.each do |cloud|
+      cloud.terminate
+    end
+  end
+
+  
+  def terminate
     instance = AWS::EC2.new(:region => "us-west-2").instances[self.instance_id]
     instance.terminate
     self.destroy
-    user.account.credit(self.turn_off_at)
   end
 
 end

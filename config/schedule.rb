@@ -19,6 +19,6 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every 1.hours do
-  runner "bin/shutoff_expired_instances.rb"
+every 15.minutes do
+  runner "Cloud.terminate_idle"
 end

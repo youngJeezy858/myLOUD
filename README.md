@@ -22,4 +22,14 @@ Ubuntu AMI provided by Amazon to use for testing.  You can find the ID
 by launching an EC2 instance and looking through the quick start AMI
 page.
 
-  
+### Setting up cron to shut off idle instances
+
+This app is designed to shut off instances after a certain amount of
+time using a cronjob that runs every 15 minutes. After you install
+your gems you will need to update your crontabs for this feature to be
+fully functional.
+
+_from {RAILS_ROOT}_
+```
+$ whenever --update-crontab myloud --set environment=[RAILS_ENV]
+```  

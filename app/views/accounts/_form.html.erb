@@ -11,6 +11,12 @@
       <%= f.number_field :instance_limit, :class => 'number_field' %>
     </div>
   </div>
+  <div class="control-group">
+    <%= f.label :power_user, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :power_user %>
+    </div>
+  </div>
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

@@ -11,15 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140929211242) do
+ActiveRecord::Schema.define(:version => 20141009164231) do
 
   create_table "accounts", :force => true do |t|
     t.integer  "user_id"
     t.integer  "minutes",           :default => 6000
     t.integer  "instance_limit",    :default => 2
-    t.datetime "created_at",                          :null => false
-    t.datetime "updated_at",                          :null => false
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
     t.string   "security_group_id"
+    t.boolean  "power_user",        :default => false
   end
 
   create_table "amis", :force => true do |t|

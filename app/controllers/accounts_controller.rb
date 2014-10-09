@@ -40,7 +40,7 @@ class AccountsController < ApplicationController
 
   private
     def account_params
-      params.require(:account).permit(:minutes, :instance_limit)
+      params.require(:account).permit(:minutes, :instance_limit, :power_user)
     end
 
     def set_account

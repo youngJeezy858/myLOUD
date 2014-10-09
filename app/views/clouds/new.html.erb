@@ -13,6 +13,17 @@
 	<%= f.collection_select(:ami_id, Ami.all, :imageId, :name) %>
       </div>
     </div>
+
+    <% if current_user.admin or current_user.account.power_user %>
+      <div class="controls">
+	<%= label_tag(:runtime, "Running Time (in hours)") %>
+	<div class="control-group">
+	  <%= number_field_tag :runtime, nil, 
+	      min: 1, max: current_user.account.minutes/60 %>
+	</div>
+      </div>
+    <% end %>
+
     <%= f.submit "Create", class: 'btn btn-primary', style: 'width: 220px' %>
   </div>
 

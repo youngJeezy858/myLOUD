@@ -19,7 +19,7 @@ class Cloud < ActiveRecord::Base
   end
 
   
-  def create_instance(user)
+  def create_instance(user, runtime)
     ami = Ami.where("imageId = ?", self.ami_id).last
     self.name = ami.name + "_#{user.login}"
     i = 2
@@ -28,7 +28,11 @@ class Cloud < ActiveRecord::Base
       i = i + 1
     end
     
-    self.turn_off_at = DateTime.now + 2.minutes
+    if runtime.nil?
+      runtime = 2
+    end
+    
+    self.turn_off_at = DateTime.now + runtime.hours
     self.subnet_id = AWS_CONFIGS["subnet"]
     
     ec2 = AWS::EC2.new(:region => "us-west-2")
@@ -44,15 +48,15 @@ class Cloud < ActiveRecord::Base
                               { :key => 'Name', :value => "#{self.name}" }])
     save!
 
-    user.account.subtract_minutes(2)
+    user.account.subtract_minutes(runtime * 60)
   end
 
 
   def start_instance(user)
     instance = AWS::EC2.new(:region => "us-west-2").instances[self.instance_id]
     instance.start
-    self.turn_off_at = DateTime.now + 2.minutes
-    user.account.subtract_minutes(2)
+    self.turn_off_at = DateTime.now + 2.hours
+    user.account.subtract_minutes(120)
   end
 
 

@@ -8,6 +8,7 @@
       <th>Name</th>
       <th>Runtime Hours</th>
       <th>Instance Limit</th>
+      <th>Power User?</th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +17,7 @@
       <td><%= account.user.login %></td>
       <td><%= format_minutes current_user.account.minutes %></td>
       <td><%= account.instance_limit %></td>
+      <td><%= account.power_user %></td>
       <td>
         <%= link_to t('.edit', :default => t("Edit Account")),
         edit_account_path(account), :class => 'btn btn-mini' %>

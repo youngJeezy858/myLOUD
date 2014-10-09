@@ -18,7 +18,7 @@ class CloudsController < ApplicationController
 
     respond_to do |format|
       if @cloud.save
-        @cloud.create_instance(current_user)
+        @cloud.create_instance(current_user, params[:runtime].to_i)
         format.html { redirect_to control_panel_path, notice: 'Instance was successfully started.' }
       else
         format.html { render action: "new" }

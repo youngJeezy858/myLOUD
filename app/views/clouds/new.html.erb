@@ -18,8 +18,8 @@
       <div class="controls">
 	<%= label_tag(:runtime, "Running Time (in hours)") %>
 	<div class="control-group">
-	  <%= number_field_tag :runtime, nil, 
-	      min: 1, max: current_user.account.minutes/60 %>
+	  <%= number_field_tag :runtime, 2, 
+	      min: 1, max: current_user.account.minutes/60%>
 	</div>
       </div>
     <% end %>

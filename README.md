@@ -29,7 +29,7 @@ time using a cronjob that runs every 15 minutes. After you install
 your gems you will need to update your crontabs for this feature to be
 fully functional.
 
-_from {RAILS_ROOT}_
+_in {RAILS__ROOT}_
 ```
 $ whenever --update-crontab myloud --set environment=[RAILS_ENV]
 ```  

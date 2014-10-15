@@ -26,6 +26,7 @@
   </div>
 
   <div class="span9">
+
     <table class="table table-striped">
       <thead>
 	<tr>
@@ -44,8 +45,10 @@
 	<tr>
 	  <td><%= cloud.name %></td>
 	  <td><%= format_turn_off_at cloud.turn_off_at %></td>
-	  <%= render partial: 'instance_actions', 
-	      :locals => { :cloud => cloud } %>
+	  <%= content_tag "div", id: "instance_actions", data: {cloud: cloud.id} do %>
+	    <%= render partial: 'instance_actions', 
+		:locals => { :cloud => cloud } %>
+	  <% end %>
 	</tr>
 	<% end %>
       </tbody>

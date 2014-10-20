@@ -2,7 +2,7 @@ Myloud::Application.routes.draw do
   
 
   get "control_panel" => 'control_panel#index'
-  match 'instance_actions/:id', :to => 'control_panel#instance_actions'
+  get "control_panel/instance_actions" => 'control_panel#instance_actions'
   get "download_key" => 'control_panel#download_key'
 
   resources :accounts

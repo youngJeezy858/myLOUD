@@ -7,11 +7,8 @@ class ControlPanelController < ApplicationController
   end
 
   def instance_actions
-    @cloud = Cloud.find(params[:id])
-
-    respond_to do |format|
-      format.js
-    end
+    @cloud = current_user.account.clouds.first
+    render :partial => 'instance_actions', :locals => { :cloud => @cloud } 
   end
 
 end

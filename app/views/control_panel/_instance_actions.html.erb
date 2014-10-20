@@ -1,23 +1,35 @@
+<% current_user.account.clouds.each do |cloud| %>
 <% @instance = get_instance(cloud.instance_id) %>
-<td><%= @instance.ip_address %></td>
-<td><%= @instance.status %></td>
+<tr>
+  <td><%= cloud.name %></td>
+  <td><%= format_turn_off_at cloud.turn_off_at %></td>
+  <td><%= @instance.ip_address %></td>
+  <td><%= @instance.status %></td>
 
-<% if @instance.status.to_s == "stopped" %>
+  <% if @instance.status.to_s == "stopped" %>
   <td></td>
   <td><%= link_to "Start", start_cloud_path(cloud), 
 	  method: 'put', class: 'btn btn-mini btn-success' %></td>
-<% elsif @instance.status.to_s == "running" %>
+  <% elsif @instance.status.to_s == "running" %>
   <td><%= link_to "Reboot", reboot_cloud_path(cloud), 
 	  method: 'put', class: 'btn btn-mini btn-warning' %></td>
   <td><%= link_to "Stop", stop_cloud_path(cloud), 
 	  method: 'put', class: 'btn btn-mini btn-warning' %></td>
-<% else %>
+  <% else %>
   <td></td>
   <td></td>
+  <% end %>
+
+  <td>
+    <%= link_to 'Terminate', cloud,
+	method: :delete, data: { confirm: 'Are you sure?' },
+	:class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>
 <% end %>
 
-<td>
-  <%= link_to 'Terminate', cloud,
-      method: :delete, data: { confirm: 'Are you sure?' },
-      :class => 'btn btn-mini btn-danger' %>
-</td>
+
+
+
+
+

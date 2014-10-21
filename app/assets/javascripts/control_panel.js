@@ -1,10 +1,20 @@
 
 $(function () {
-    // will call refreshPartial every 10 seconds
-    setInterval(refreshPartial, 1000)
+    $('#loading').hide()
+    $(document)
+	.ajaxStart(function() {
+	    $('#loading').show();
+	})
+	.ajaxStop(function() {
+	    $('#loading').hide();
+	});
+    refreshPartial();
 });
+
 
 // calls action refreshing the partial
 function refreshPartial() {
     $('.instance_actions').load('/control_panel/instance_actions');
+    setTimeout(refreshPartial, 10000);
 }
+

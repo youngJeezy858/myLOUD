@@ -6,9 +6,8 @@ class ControlPanelController < ApplicationController
     send_file Rails.root.join('private', 'loud.pem')
   end
 
-  def instance_actions
-    @cloud = current_user.account.clouds.first
-    render :partial => 'instance_actions', :locals => { :cloud => @cloud } 
+  def refresh
+    render :partial => 'control_panel/instance_actions' 
   end
 
 end

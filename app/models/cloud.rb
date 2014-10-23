@@ -55,15 +55,12 @@ class Cloud < ActiveRecord::Base
   def start_instance(user)
     instance = AWS::EC2.new(:region => "us-west-2").instances[self.instance_id]
     instance.start
-    self.turn_off_at = DateTime.now + 2.hours
-    user.account.subtract_minutes(120)
   end
 
 
   def stop_instance(user)
     instance = AWS::EC2.new(:region => "us-west-2").instances[self.instance_id]
     instance.stop
-    user.account.credit(self.turn_off_at)
   end
 
 

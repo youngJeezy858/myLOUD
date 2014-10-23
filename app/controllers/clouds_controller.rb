@@ -1,5 +1,5 @@
 class CloudsController < ApplicationController
-  before_filter :authenticate_user, :only => [:start, :stop, :reboot, :destroy]
+#  before_filter :authenticate_user, :only => [:start, :stop, :reboot, :destroy]
   before_filter :authenticate_admin, :only => [:index]
   layout 'admin_tools', :only => [:index]
 
@@ -44,8 +44,7 @@ class CloudsController < ApplicationController
     @cloud = Cloud.find(params[:id])
     @cloud.start_instance(current_user)
 
-    redirect_to :back,
-      notice: "#{@cloud.name} was successfully booted!"
+    render :partial => 'control_panel/instance_actions'
   end
 
 
@@ -53,8 +52,7 @@ class CloudsController < ApplicationController
     @cloud = Cloud.find(params[:id])
     @cloud.stop_instance(current_user)
 
-    redirect_to :back,
-      notice: "#{@cloud.name} is shutting down!"
+    render :partial => 'control_panel/instance_actions'
   end
 
 
@@ -62,8 +60,7 @@ class CloudsController < ApplicationController
     @cloud = Cloud.find(params[:id])
     @cloud.reboot_instance
 
-    redirect_to :back,
-      notice: "#{@cloud.name} successfully rebooted!"
+    render :partial => 'control_panel/instance_actions'
   end
 
 

@@ -18,9 +18,10 @@ module ApplicationHelper
   end
 
   def get_instances(clouds)
+    instances = Array.new
+    return instances if clouds.empty?
     ids = clouds.pluck(:instance_id)
 
-    instances = Array.new
     ec2 = AWS::EC2.new(:region => 'us-west-2')
     
     response = ec2.client.describe_instances(:instance_ids => ids)

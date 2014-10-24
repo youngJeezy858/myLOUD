@@ -36,6 +36,7 @@ class CloudsController < ApplicationController
       format.html { redirect_to control_panel_path, 
         notice: "#{@cloud.name} has been successully destroyed"  }
       format.json { head :no_content }
+      format.js { render :layout => false }
     end
   end
 

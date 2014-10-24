@@ -17,19 +17,31 @@ module ApplicationHelper
     time.strftime("%l:%M %p")
   end
 
-  def get_instance(id)
-    ec2 = AWS::EC2.new(:region => 'us-west-2')
-    ec2.instances[id]
-  end
+  def get_instances(clouds)
+    ids = clouds.pluck(:instance_id)
 
-  def get_instance_status(id)
+    instances = Array.new
     ec2 = AWS::EC2.new(:region => 'us-west-2')
-    ec2.instances[id].status
-  end
-
-  def get_instance_ip(id)
-    ec2 = AWS::EC2.new(:region => 'us-west-2')
-    ec2.instances[id].ip_address
+    
+    response = ec2.client.describe_instances(:instance_ids => ids)
+    response[:reservation_set].each do |d|
+      data = d[:instances_set].first
+      cloud = clouds.find {|c| c.name == data[:tag_set].first[:value]}
+      
+      ip = data[:ip_address]
+      status = data[:instance_state][:name]
+      instance = {
+        :name => cloud.name,
+        :id => cloud.id,
+        :turn_off_at => cloud.turn_off_at,
+        :ip_address => ip,
+        :status => status
+      }
+      instance = OpenStruct.new instance
+      instances << instance
+    end
+    
+    instances
   end
 
   def get_ami_status(id)

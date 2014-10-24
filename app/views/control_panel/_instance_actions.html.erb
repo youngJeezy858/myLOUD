@@ -1,5 +1,9 @@
+<% @instances = get_instances(current_user.account.clouds) %>
+<%= debug @instances %>
+
+<% if false %>
 <% current_user.account.clouds.each do |cloud| %>
-<% @instance = get_instance(cloud.instance_id) %>
+
 <tr data-id="<%= cloud.id %>">
   <td><%= cloud.name %></td>
   <td><%= format_turn_off_at cloud.turn_off_at %></td>
@@ -26,6 +30,8 @@
 	:class => 'btn btn-mini btn-danger' %>
   </td>
 </tr>
+<% end %>
+
 <% end %>
 
 

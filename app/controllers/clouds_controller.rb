@@ -1,5 +1,5 @@
 class CloudsController < ApplicationController
-#  before_filter :authenticate_user, :only => [:start, :stop, :reboot, :destroy]
+  before_filter :authenticate_user, :only => [:start, :stop, :reboot, :destroy]
   before_filter :authenticate_admin, :only => [:index]
   layout 'admin_tools', :only => [:index]
 
@@ -60,6 +60,7 @@ class CloudsController < ApplicationController
     @cloud = Cloud.find(params[:id])
     @cloud.reboot_instance
 
+    flash[:notice] = @cloud.name + " was successfully rebooted"
     render :partial => 'control_panel/instance_actions'
   end
 

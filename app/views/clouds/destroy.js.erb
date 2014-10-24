@@ -1,3 +1,6 @@
 $('.delete-cloud').bind('ajax:success', function() {  
             $('.instance_actions').load('/control_panel/refresh');
+	    $('p#cloud-msgs').text('cLOUD was successfully destroyed');
+	    $('#cloud-msgs-container').show();
+	    $('#cloud-msgs-container').fadeOut(5000);
 });

@@ -32,6 +32,8 @@ class CloudsController < ApplicationController
     @cloud = Cloud.find(params[:id])
     @cloud.terminate_instance(current_user)
    
+
+    flash[:notice] = @cloud.name + " was successfully destroyed"
     respond_to do |format|
       format.html { redirect_to control_panel_path, 
         notice: "#{@cloud.name} has been successully destroyed"  }

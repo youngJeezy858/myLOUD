@@ -19,7 +19,8 @@ class CloudsController < ApplicationController
     respond_to do |format|
       if @cloud.save
         @cloud.create_instance(current_user, params[:runtime].to_i)
-        format.html { redirect_to control_panel_path, notice: 'Instance was successfully started.' }
+        format.html { redirect_to control_panel_path }
+        format.json { head :no_content }
       else
         format.html { render action: "new" }
         format.json { render json: @cloud.errors, status: :unprocessable_entity }
@@ -38,7 +39,7 @@ class CloudsController < ApplicationController
       format.html { redirect_to control_panel_path, 
         notice: "#{@cloud.name} has been successully destroyed"  }
       format.json { head :no_content }
-      format.js { render :layout => false }
+      format.js { }
     end
   end
 

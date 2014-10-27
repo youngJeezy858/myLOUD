@@ -44,11 +44,11 @@ class Cloud < ActiveRecord::Base
       :associate_public_ip_address => true )
 
     self.instance_id = instance.id
+    save!
+    user.account.subtract_minutes(runtime * 60)
+
     ec2.client.create_tags(:resources => [self.instance_id], :tags => [
                               { :key => 'Name', :value => "#{self.name}" }])
-    save!
-
-    user.account.subtract_minutes(runtime * 60)
   end
 
 

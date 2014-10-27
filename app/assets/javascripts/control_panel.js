@@ -13,7 +13,9 @@ $(document).ready(function () {
     refreshDatPartial();
 
     $('#refresh_instances').click(refreshPartial);
+
     fire_it_up();
+
 });
 
 

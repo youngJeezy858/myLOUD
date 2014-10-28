@@ -11,6 +11,9 @@ Myloud::Application.routes.draw do
       put 'start'
       put 'stop'
       put 'reboot'
+    end  
+    collection do
+      get 'refresh'
     end
   end
 

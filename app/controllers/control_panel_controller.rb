@@ -7,7 +7,7 @@ class ControlPanelController < ApplicationController
   end
 
   def refresh
-    render :partial => 'control_panel/instance_actions' 
+    render :partial => 'control_panel/my_instance_list' 
   end
 
 end

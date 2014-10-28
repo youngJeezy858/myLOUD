@@ -8,24 +8,17 @@
       <th>Owner</th>
       <th>Name</th>
       <th>Created At</th>
+      <th>Shutoff Time</th>
       <th>IP Address</th>
       <th>Status</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th><%= link_to image_tag("refresh.png", size: "25x25", id: "refresh"),
+              "#", id: 'refresh_instances', class: 'btn btn-mini', :remote => true %></th>
     </tr>
   </thead>
 
-  <tbody>
-    <% @clouds.each do |cloud| %>
-    <tr>
-      <td><%= cloud.account.user.login %></td>
-      <td><%= cloud.name %></td>
-      <td><%= cloud.created_at.strftime("%l:%M %p") %></td>
-      <%= render partial: 'control_panel/instance_actions',
-              :locals => { :cloud => cloud } %>
-      <td><%= link_to "Create AMI", new_ami_path(cloud_id: cloud), 
-	      class: 'btn btn-mini btn-primary' %></td>
-    </tr>
-    <% end %>
+  <tbody id="instances">
+    <%= render 'instance_list' %>
   </tbody>
 </table>
 

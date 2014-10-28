@@ -30,23 +30,41 @@ function fire_it_up() {
 function cloudAction(action) {
     $("[id^=" + action + "-]").click(function () {
 	var id = $(this).data("id");
+	var name = $(this).data("name");
 	var url = "clouds/" + id + "/" + action;
 	$.ajax({
 	    url: url,
 	    type: 'PUT'
 	});
 	setTimeout(refreshPartial, 1000);
+
+	$('p#cloud-msgs').text(name + " was successfully " + pastTense(action));
+        $('#cloud-msgs-container').show()
+        setTimeout(function() {
+            $('#cloud-msgs-container').fadeOut(2000);
+        }, 2000);
     });
 }
 
 function refreshPartial() {
-    $('.instance_actions').load('/control_panel/refresh');
+    $('.instances').load('/control_panel/refresh');
 }
 
 
-// calls action refreshing the partial
 function refreshDatPartial() {
     refreshPartial();
     setTimeout(refreshDatPartial, 60000);
 }
 
+
+function pastTense(string) {
+    if (string == "stop") {
+	string = "stopped.";
+    } else if (string == "start") {
+	string = "started.";
+    } else {
+	string = "rebooted.";
+    }
+    
+    return string;
+}

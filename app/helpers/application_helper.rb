@@ -13,14 +13,20 @@ module ApplicationHelper
       sprintf("%.2d", current_user.account.minutes % 60)
   end
 
-  def format_turn_off_at(time)
+  def format_time(time)
     time.strftime("%l:%M %p")
   end
 
   def get_instances(clouds)
     instances = Array.new
     return instances if clouds.empty?
-    ids = clouds.pluck(:instance_id)
+    
+    ids = ""
+    if clouds.kind_of?(Array)
+      ids = clouds.map(&:instance_id)
+    else
+      ids = clouds.pluck(:instance_id)
+    end
 
     ec2 = AWS::EC2.new(:region => 'us-west-2')
     
@@ -32,6 +38,8 @@ module ApplicationHelper
       ip = data[:ip_address]
       status = data[:instance_state][:name]
       instance = {
+        :owner => cloud.account.user.login,
+        :created_at => cloud.created_at,
         :name => cloud.name,
         :id => cloud.id,
         :turn_off_at => cloud.turn_off_at,

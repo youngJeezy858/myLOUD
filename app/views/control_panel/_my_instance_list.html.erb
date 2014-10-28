@@ -1,0 +1,40 @@
+
+<% @instances = get_instances(current_user.account.clouds) %>
+<% @instances.each do |instance| %>
+
+  <tr>
+    <td><%= instance.name %></td>
+    <td><%= format_time instance.turn_off_at %></td>
+    <td><%= instance.ip_address %></td>
+    <td><%= instance.status %></td>
+
+    <% if instance.status.to_s == "stopped" %>
+      <td><%= link_to "Start", "#", class: 'btn btn-mini btn-success',
+             :data => { :id => instance.id, :name => instance.name }, 
+	     id: "start-#{instance.name}", :remote => true %></td>
+      <td></td>
+    <% elsif instance.status.to_s == "running" %>
+      <td><%= link_to "Reboot", "#", class: 'btn btn-mini btn-warning', 
+	      :data => { :id => instance.id, :name => instance.name }, 
+	      id: "reboot-#{instance.name}", :remote => true %></td>
+      <td><%= link_to "Stop", "#", class: 'btn btn-mini btn-warning',
+	     :data => { :id => instance.id, :name => instance.name }, 
+	      id: "stop-#{instance.name}", :remote => true %></td>
+    <% else %>
+      <td></td>
+      <td></td>
+    <% end %>
+
+    <td>
+      <%= link_to 'Terminate', cloud_path(instance.id),
+	  method: :delete, data: { confirm: 'Are you sure? Terminating a cLOUD will result in all data being lost.' },
+	  :class => 'btn btn-mini btn-danger delete-cloud', :remote => true %>
+    </td>
+  </tr>
+<% end %>
+
+
+
+
+
+

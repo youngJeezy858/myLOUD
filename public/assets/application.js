@@ -13691,10 +13691,32 @@ return jQuery;
   });
 
 }).call(this);
-(function() {
+$(document).ready(function () {
+    $(document)
+        .ajaxStart(function() {
+            $('#refresh_all').attr("src", "/assets/refresh.gif");
+            $('#refresh_all_instances').off('click')
+        })
+        .ajaxStop(function() {
+            $('#refresh_all').attr("src", "/assets/refresh.png");
+            $('#refresh_all_instances').on('click', refresh_all);
+        });
+
+    cont_refresh_all();
+    $('#refresh_all_instances').click(refresh_all);
+});
 
 
-}).call(this);
+function refresh_all() {
+    $('.instances').load('/clouds/refresh');
+}
+
+
+function cont_refresh_all() {
+    refresh_all();
+    setTimeout(cont_refresh_all, 5000);
+}
+;
 
 $(document).ready(function () {
     $(document)
@@ -13710,26 +13732,14 @@ $(document).ready(function () {
     refreshDatPartial();
 
     $('#refresh_instances').click(refreshPartial);
+
     fire_it_up();
+
 });
 
 
 
 function fire_it_up() {
-//    $('[id^="start-"]').click(function () {
-//	var id = $(this).data("id");
-//	cloudAction(id, "start");
-//    });
-
-//    $('[id^="stop-"]').click(function () {
-//	var id = $(this).data("id");
-//	cloudAction(id, "stop");
-//    });
-
-//    $('[id^="reboot-"]').click(function () {
-//	var id = $(this).data("id");
-//	cloudAction(id, "reboot");
-//    });
     cloudAction("start");
     cloudAction("stop");
     cloudAction("reboot");
@@ -13739,32 +13749,44 @@ function fire_it_up() {
 function cloudAction(action) {
     $("[id^=" + action + "-]").click(function () {
 	var id = $(this).data("id");
+	var name = $(this).data("name");
 	var url = "clouds/" + id + "/" + action;
 	$.ajax({
 	    url: url,
 	    type: 'PUT'
 	});
 	setTimeout(refreshPartial, 1000);
+
+	$('p#cloud-msgs').text(name + " was successfully " + pastTense(action));
+        $('#cloud-msgs-container').show()
+        setTimeout(function() {
+            $('#cloud-msgs-container').fadeOut(2000);
+        }, 2000);
     });
 }
 
-function cloud(action) {
-    var id = $(this).data("id");
-    $(this).click(id, action);
-}
-
-
 function refreshPartial() {
-    $('.instance_actions').load('/control_panel/refresh');
+    $('.instances').load('/control_panel/refresh');
 }
 
 
-// calls action refreshing the partial
 function refreshDatPartial() {
     refreshPartial();
     setTimeout(refreshDatPartial, 60000);
 }
 
+
+function pastTense(string) {
+    if (string == "stop") {
+	string = "stopped.";
+    } else if (string == "start") {
+	string = "started.";
+    } else {
+	string = "rebooted.";
+    }
+    
+    return string;
+}
 ;
 (function() {
 
@@ -13786,8 +13808,6 @@ function refreshDatPartial() {
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-
-
 
 
 

@@ -7,6 +7,7 @@
     <tr>
       <th>Name</th>
       <th>Runtime Hours</th>
+      <th>Total Usage</th>
       <th>Instance Limit</th>
       <th>Power User?</th>
     </tr>
@@ -15,7 +16,8 @@
     <% @accounts.each do |account| %>
     <tr>
       <td><%= account.user.login %></td>
-      <td><%= format_minutes current_user.account.minutes %></td>
+      <td><%= format_minutes account.minutes %></td>
+      <td><%= format_minutes account.total_usage %></td>
       <td><%= account.instance_limit %></td>
       <td><%= account.power_user %></td>
       <td>

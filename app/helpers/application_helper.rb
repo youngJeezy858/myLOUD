@@ -9,8 +9,8 @@ module ApplicationHelper
   end
 
   def format_minutes(minutes)
-    (current_user.account.minutes / 60).to_s + ":" + 
-      sprintf("%.2d", current_user.account.minutes % 60)
+    (minutes / 60).to_s + ":" + 
+      sprintf("%.2d", minutes % 60)
   end
 
   def format_time(time)

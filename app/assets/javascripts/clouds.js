@@ -9,17 +9,17 @@ $(document).ready(function () {
             $('#refresh_all_instances').on('click', refresh_all);
         });
 
-    cont_refresh_all();
+    setTimeout(cont_refresh_all, 60000);
     $('#refresh_all_instances').click(refresh_all);
 });
 
 
 function refresh_all() {
-    $('.instances').load('/clouds/refresh');
+    $('#all_instances').load('/clouds/refresh');
 }
 
 
 function cont_refresh_all() {
     refresh_all();
-    setTimeout(cont_refresh_all, 5000);
+    setTimeout(cont_refresh_all, 60000);
 }

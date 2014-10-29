@@ -1,3 +1,8 @@
+<head>
+  <%= javascript_include_tag params[:controller] %>
+</head>
+
+
 <div class="page-header">
   <h1>cLOUDs</h1>
 </div>
@@ -12,12 +17,12 @@
       <th>IP Address</th>
       <th>Status</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
-      <th><%= link_to image_tag("refresh.png", size: "25x25", id: "refresh"),
-              "#", id: 'refresh_instances', class: 'btn btn-mini', :remote => true %></th>
+      <th><%= link_to image_tag("refresh.png", size: "25x25", id: "refresh_all"),
+              "#", id: 'refresh_all_instances', class: 'btn btn-mini', :remote => true %></th>
     </tr>
   </thead>
 
-  <tbody id="instances">
+  <tbody id="all_instances">
     <%= render 'instance_list' %>
   </tbody>
 </table>

@@ -10,7 +10,8 @@ $(document).ready(function () {
 	    $('#refresh_instances').on('click', refreshPartial);
 	    fire_it_up();
 	});
-    refreshDatPartial();
+    
+    setTimeout(refreshDatPartial, 60000);
 
     $('#refresh_instances').click(refreshPartial);
 

@@ -1,11 +1,13 @@
+<% environment.context_class.instance_eval { include Rails.application.routes.url_helpers } %>
+
 $(document).ready(function () {
     $(document)
         .ajaxStart(function() {
-            $('#refresh_all').attr("src", "/assets/refresh.gif");
+            $('#refresh_all').attr("src", "<%= image_path 'refresh.gif' %>");
             $('#refresh_all_instances').off('click')
         })
         .ajaxStop(function() {
-            $('#refresh_all').attr("src", "/assets/refresh.png");
+            $('#refresh_all').attr("src", "<%= image_path 'refresh.png' %>");
             $('#refresh_all_instances').on('click', refresh_all);
         });
 
@@ -15,7 +17,7 @@ $(document).ready(function () {
 
 
 function refresh_all() {
-    $('#all_instances').load('/clouds/refresh');
+    $('#all_instances').load('<%= url_for :controller => "clouds", :action => "refresh" %>');
 }
 
 

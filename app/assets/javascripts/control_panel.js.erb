@@ -1,12 +1,13 @@
+<% environment.context_class.instance_eval { include Rails.application.routes.url_helpers } %>
 
 $(document).ready(function () {
     $(document)
 	.ajaxStart(function() {
-	    $('#refresh').attr("src", "/assets/refresh.gif");
+	    $('#refresh').attr("src", "<%= image_path 'refresh.gif' %>");
 	    $('#refresh_instances').off('click')
 	})
 	.ajaxStop(function() {
-	    $('#refresh').attr("src", "/assets/refresh.png");
+	    $('#refresh').attr("src", "<%= image_path 'refresh.png' %>");
 	    $('#refresh_instances').on('click', refreshPartial);
 	    fire_it_up();
 	});
@@ -32,7 +33,7 @@ function cloudAction(action) {
     $("[id^=" + action + "-]").click(function () {
 	var id = $(this).data("id");
 	var name = $(this).data("name");
-	var url = "clouds/" + id + "/" + action;
+	var url = "<%= url_for :controller => 'clouds' %>" + "/" + id + "/" + action;
 	$.ajax({
 	    url: url,
 	    type: 'PUT'
@@ -48,7 +49,7 @@ function cloudAction(action) {
 }
 
 function refreshPartial() {
-    $('.instances').load('/control_panel/refresh');
+    $('.instances').load("<%= url_for :controller => 'control_panel', :action => 'refresh' %>");
 }
 
 

@@ -24,7 +24,7 @@
           <th><%=t '.actions', :default => t("helpers.actions") %></th>
           <th></th>
           <th><%= link_to image_tag("refresh.png", size: "25x25", id: "refresh"), 
-		  "#", id: 'refresh_instances',
+		  control_panel_refresh_path, id: 'refresh_instances',
 		  class: 'btn btn-mini', :remote => true %></th>
         </tr>
       </thead>  

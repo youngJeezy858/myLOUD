@@ -1,5 +1,6 @@
 $('.delete-cloud').bind('ajax:success', function() {  
-            $('.instances').load('/control_panel/refresh');
+            var href = $('.instances).attr('href');
+            $('.instances').load(href);
 	    $('#time_left').text("<%= (current_user.account.minutes / 60).to_s + ':' + sprintf('%.2d', current_user.account.minutes % 60) %>");
 
 	    $('#time_left_plus').show().text("+").css("color", "green").fadeOut(3000);

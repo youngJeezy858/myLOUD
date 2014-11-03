@@ -1,0 +1,10 @@
+$('.reboot-cloud').bind('ajax:success', function() {
+            var href = $('#refresh_instances').attr('href');
+            $('.instances').load(href);
+
+            $('p#cloud-msgs').text("<%= @cloud.name %> was successfully rebooted");
+            $('#cloud-msgs-container').show()
+            setTimeout(function() {
+              $('#cloud-msgs-container').fadeOut(2000);
+            }, 2000);
+});

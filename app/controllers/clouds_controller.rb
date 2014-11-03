@@ -34,8 +34,6 @@ class CloudsController < ApplicationController
     @cloud = Cloud.find(params[:id])
     @cloud.terminate_instance(current_user)
    
-
-    flash[:notice] = @cloud.name + " was successfully destroyed"
     respond_to do |format|
       format.html { redirect_to control_panel_path, 
         notice: "#{@cloud.name} has been successully destroyed"  }
@@ -49,7 +47,9 @@ class CloudsController < ApplicationController
     @cloud = Cloud.find(params[:id])
     @cloud.start_instance(current_user)
 
-    render :partial => 'control_panel/my_instance_list'
+    respond_to do |format|
+      format.js { }
+    end
   end
 
 
@@ -57,7 +57,9 @@ class CloudsController < ApplicationController
     @cloud = Cloud.find(params[:id])
     @cloud.stop_instance(current_user)
 
-    render :partial => 'control_panel/my_instance_list'
+    respond_to do |format|
+      format.js { }
+    end
   end
 
 
@@ -65,8 +67,9 @@ class CloudsController < ApplicationController
     @cloud = Cloud.find(params[:id])
     @cloud.reboot_instance
 
-    flash[:notice] = @cloud.name + " was successfully rebooted"
-    render :partial => 'control_panel/my_instance_list'
+    respond_to do |format|
+      format.js { }
+    end
   end
 
 

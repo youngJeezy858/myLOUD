@@ -1,7 +1,5 @@
-<% environment.context_class.instance_eval { include Rails.application.routes.url_helpers } %>
-
 $(document).ready(function () {
-    $(document)
+   $(document)
 	.ajaxStart(function() {
 	    $('#refresh').attr("src", "<%= image_path 'refresh.gif' %>");
 	    $('#refresh_instances').off('click')
@@ -9,64 +7,20 @@ $(document).ready(function () {
 	.ajaxStop(function() {
 	    $('#refresh').attr("src", "<%= image_path 'refresh.png' %>");
 	    $('#refresh_instances').on('click', refreshPartial);
-	    fire_it_up();
 	});
     
     setTimeout(refreshDatPartial, 60000);
-
-    $('#refresh_instances').click(refreshPartial);
-
-    fire_it_up();
-
+    $('#refresh_instances').on('click', refreshPartial);
 });
 
 
-
-function fire_it_up() {
-    cloudAction("start");
-    cloudAction("stop");
-    cloudAction("reboot");
-}
-
-
-function cloudAction(action) {
-    $("[id^=" + action + "-]").click(function () {
-	var id = $(this).data("id");
-	var name = $(this).data("name");
-	var url = "<%= url_for :controller => 'clouds' %>" + "/" + id + "/" + action;
-	$.ajax({
-	    url: url,
-	    type: 'PUT'
-	});
-	setTimeout(refreshPartial, 1000);
-
-	$('p#cloud-msgs').text(name + " was successfully " + pastTense(action));
-        $('#cloud-msgs-container').show()
-        setTimeout(function() {
-            $('#cloud-msgs-container').fadeOut(2000);
-        }, 2000);
-    });
-}
-
 function refreshPartial() {
-    $('.instances').load("<%= url_for :controller => 'control_panel', :action => 'refresh' %>");
+    var href = $('#refresh_instances').attr('href');
+    $('.instances').load(href);
 }
 
 
 function refreshDatPartial() {
     refreshPartial();
     setTimeout(refreshDatPartial, 60000);
-}
-
-
-function pastTense(string) {
-    if (string == "stop") {
-	string = "stopped.";
-    } else if (string == "start") {
-	string = "started.";
-    } else {
-	string = "rebooted.";
-    }
-    
-    return string;
 }

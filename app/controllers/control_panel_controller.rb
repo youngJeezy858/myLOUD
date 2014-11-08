@@ -8,8 +8,8 @@ class ControlPanelController < ApplicationController
 
   def refresh
     respond_to do |format|
-      format.html { render :partial => 'control_panel/my_instance_list' }
-      format.js { render :nothing => true }
+      format.html { render :partial => 'my_instance_list' }
+      format.js { }
     end
 
   end

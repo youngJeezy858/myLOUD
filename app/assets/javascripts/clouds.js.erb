@@ -1,5 +1,3 @@
-<% environment.context_class.instance_eval { include Rails.application.routes.url_helpers } %>
-
 $(document).ready(function () {
     $(document)
         .ajaxStart(function() {
@@ -15,9 +13,9 @@ $(document).ready(function () {
     $('#refresh_all_instances').click(refresh_all);
 });
 
-
 function refresh_all() {
-    $('#all_instances').load('<%= url_for :controller => "clouds", :action => "refresh" %>');
+    var href = $('#refresh_instances').attr('href');	
+    $('#all_instances').load(href);
 }
 
 

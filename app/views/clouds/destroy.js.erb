@@ -1,13 +1,14 @@
 $('.delete-cloud').bind('ajax:success', function() {  
-            var href = $('.instances).attr('href');
+            var href = $('#refresh_instances').attr('href');
             $('.instances').load(href);
 	    $('#time_left').text("<%= (current_user.account.minutes / 60).to_s + ':' + sprintf('%.2d', current_user.account.minutes % 60) %>");
 
 	    $('#time_left_plus').show().text("+").css("color", "green").fadeOut(3000);
 
 	    $('p#cloud-msgs').text("<%= @cloud.name %> was successfully terminated");
-	    $('#cloud-msgs-container').show()
+	    $('#cloud-msgs-container').show();
 	    setTimeout(function() {
 	      $('#cloud-msgs-container').fadeOut(2000);
 	    }, 2000);
+
 });

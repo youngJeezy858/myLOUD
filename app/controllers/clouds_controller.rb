@@ -81,7 +81,10 @@ class CloudsController < ApplicationController
 
   
   def refresh
-    render :partial => 'instance_list'
+    respond_to do |format|
+      format.html { render :partial => 'instance_list' }
+      format.js { render :nothing => true }
+    end
   end
 
 

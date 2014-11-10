@@ -2,15 +2,12 @@ $(document).ready(function () {
    $(document)
 	.ajaxStart(function() {
 	    $('#refresh').attr("src", "<%= image_path 'refresh.gif' %>");
-//	    $('#refresh_instances').off('click')
 	})
 	.ajaxStop(function() {
 	    $('#refresh').attr("src", "<%= image_path 'refresh.png' %>");
-//	    $('#refresh_instances').on('click', refreshPartial);
 	});
     
     setTimeout(refreshDatPartial, 60000);
-//    $('#refresh_instances').on('click', refreshPartial);
 });
 
 

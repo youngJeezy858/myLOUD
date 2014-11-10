@@ -8,8 +8,9 @@
     <td><%= format_time instance.turn_off_at %></td>
     <td><%= instance.ip_address %></td>
     <td><%= instance.status %></td>
-    <td><%= link_to "Terminate", cloud_path(instance.id), method: 'delete',
-	    class: 'btn btn-mini btn-danger' %></td>
+    <td><%= link_to "Terminate", cloud_path(instance.id), 
+            method: 'delete', class: 'btn btn-mini btn-danger delete-cloud', 
+	    :remote => true %></td>
     <td><%= link_to "Create AMI", new_ami_path(cloud_id: instance.id),
             class: 'btn btn-mini btn-primary' %></td>
   </tr>

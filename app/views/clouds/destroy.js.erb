@@ -1,14 +1,24 @@
 $('.delete-cloud').bind('ajax:success', function() {  
+
+// Used on control_panel/index
+<% if @type == "control_panel" %>
             var href = $('#refresh_instances').attr('href');
             $('.instances').load(href);
 	    $('#time_left').text("<%= (current_user.account.minutes / 60).to_s + ':' + sprintf('%.2d', current_user.account.minutes % 60) %>");
 
 	    $('#time_left_plus').show().text("+").css("color", "green").fadeOut(3000);
 
-	    $('p#cloud-msgs').text("<%= @cloud.name %> was successfully terminated");
-	    $('#cloud-msgs-container').show();
+// Used on clouds/index
+<% else %>
+            var href = $('#refresh_all_instances').attr('href');
+            $('#all_instances').load(href);
+<% end %>
+
+	    $('p.cloud-msgs').text("<%= @cloud.name %> was successfully terminated");
+	    $('.cloud-msgs-container').show();
 	    setTimeout(function() {
-	      $('#cloud-msgs-container').fadeOut(2000);
+	      $('.cloud-msgs-container').fadeOut(2000);
 	    }, 2000);
+
 
 });

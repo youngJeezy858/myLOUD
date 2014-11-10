@@ -29,7 +29,7 @@
     <% end %>
 
     <td>
-      <%= link_to 'Terminate', cloud_path(instance.id),
+      <%= link_to 'Terminate', cloud_path(instance.id, :type => params[:controller]),
 	  method: :delete, data: { confirm: 'Are you sure? Terminating ' +
 	                     'a cLOUD will result in all data being lost.' },
 	  :class => 'btn btn-mini btn-danger delete-cloud', :remote => true %>

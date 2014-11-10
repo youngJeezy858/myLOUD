@@ -32,8 +32,14 @@ class CloudsController < ApplicationController
 
   def destroy
     @cloud = Cloud.find(params[:id])
-    @cloud.terminate_instance(current_user)
-   
+    @user = @cloud.account.user
+    @cloud.terminate_instance(@user)
+    @type = params[:type].to_s
+
+    logger.debug @user
+    logger.debug @cloud
+    logger.debug @type
+
     respond_to do |format|
       format.html { redirect_to control_panel_path, 
         notice: "#{@cloud.name} has been successully destroyed"  }
@@ -83,7 +89,7 @@ class CloudsController < ApplicationController
   def refresh
     respond_to do |format|
       format.html { render :partial => 'instance_list' }
-      format.js { render :nothing => true }
+      format.js { }
     end
   end
 

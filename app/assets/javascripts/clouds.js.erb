@@ -2,19 +2,16 @@ $(document).ready(function () {
     $(document)
         .ajaxStart(function() {
             $('#refresh_all').attr("src", "<%= image_path 'refresh.gif' %>");
-            $('#refresh_all_instances').off('click')
         })
         .ajaxStop(function() {
             $('#refresh_all').attr("src", "<%= image_path 'refresh.png' %>");
-            $('#refresh_all_instances').on('click', refresh_all);
         });
 
     setTimeout(cont_refresh_all, 60000);
-    $('#refresh_all_instances').click(refresh_all);
 });
 
 function refresh_all() {
-    var href = $('#refresh_instances').attr('href');	
+    var href = $('#refresh_all_instances').attr('href');	
     $('#all_instances').load(href);
 }
 

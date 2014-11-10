@@ -22,7 +22,7 @@ Myloud::Application.configure do
 
 
   # Set assets prefix for 'myloud' sub URI
-  config.assets.prefix = '/myloud/assets'
+  config.assets.prefix = '/myloud/public/assets'
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH

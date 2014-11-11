@@ -33,7 +33,7 @@ module ApplicationHelper
     response = ec2.client.describe_instances(:instance_ids => ids)
     response[:reservation_set].each do |d|
       data = d[:instances_set].first
-      cloud = clouds.find {|c| c.name == data[:tag_set].first[:value]}
+      cloud = clouds.find {|c| c.instance_id == data[:instance_id]}
       
       ip = data[:ip_address]
       status = data[:instance_state][:name]

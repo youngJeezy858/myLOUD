@@ -1,10 +1,10 @@
 $(document).ready(function () {
     $(document)
         .ajaxStart(function() {
-            $('#refresh_all').attr("src", "<%= image_path 'refresh.gif' %>");
+            $('#refresh_all_instances').html('<%= image_tag("refresh.gif", size: "25x25", id: "refresh") %>');
         })
         .ajaxStop(function() {
-            $('#refresh_all').attr("src", "<%= image_path 'refresh.png' %>");
+            $('#refresh_all_instances').html('<%= image_tag("refresh.png", size: "25x25", id: "refresh") %>');
         });
 
     setTimeout(cont_refresh_all, 60000);

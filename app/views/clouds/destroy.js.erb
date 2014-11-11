@@ -1,6 +1,5 @@
 $('.delete-cloud').bind('ajax:success', function() {  
 
-// Used on control_panel/index
 <% if @type == "control_panel" %>
             var href = $('#refresh_instances').attr('href');
             $('.instances').load(href);
@@ -8,7 +7,6 @@ $('.delete-cloud').bind('ajax:success', function() {
 
 	    $('#time_left_plus').show().text("+").css("color", "green").fadeOut(3000);
 
-// Used on clouds/index
 <% else %>
             var href = $('#refresh_all_instances').attr('href');
             $('#all_instances').load(href);

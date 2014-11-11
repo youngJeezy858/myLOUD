@@ -20,10 +20,6 @@ Myloud::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
-
-  # Set assets prefix for 'myloud' sub URI
-  config.assets.prefix = '/myloud/public/assets'
-
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 

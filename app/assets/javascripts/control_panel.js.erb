@@ -1,10 +1,12 @@
 $(document).ready(function () {
+   var pngPath = $('#refresh_instances').data('png');
+   var gifPath = $('#refresh_instances').data('gif');
    $(document)
 	.ajaxStart(function() {
-	    $('#refresh_instances').html('<%= image_tag("refresh.gif", size: "25x25", id: "refresh") %>');
+	    $('#refresh').attr("src", gifPath);
 	})
 	.ajaxStop(function() {
-	    $('#refresh_instances').html('<%= image_tag("refresh.png", size: "25x25", id: "refresh") %>');
+	    $('#refresh').attr("src", pngPath);
 	});
     
     setTimeout(refreshDatPartial, 60000);

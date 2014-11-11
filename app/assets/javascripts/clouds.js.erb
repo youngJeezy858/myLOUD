@@ -1,10 +1,12 @@
 $(document).ready(function () {
+    var pngPath = $('#refresh_all_instances').data('png');
+    var gifPath = $('#refresh_all_instances').data('gif');
     $(document)
         .ajaxStart(function() {
-            $('#refresh_all_instances').html('<%= image_tag("refresh.gif", size: "25x25", id: "refresh") %>');
+            $('#refresh_all').attr("src", gifPath);
         })
         .ajaxStop(function() {
-            $('#refresh_all_instances').html('<%= image_tag("refresh.png", size: "25x25", id: "refresh") %>');
+            $('#refresh_all').attr("src", pngPath);
         });
 
     setTimeout(cont_refresh_all, 60000);

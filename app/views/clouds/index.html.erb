@@ -23,6 +23,7 @@
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
       <th><%= link_to image_tag("refresh.png", size: "25x25", id: "refresh_all"),
               refresh_clouds_path, id: 'refresh_all_instances', class: 'btn btn-mini', 
+	      :data => { :png => image_path("refresh.png"), :gif => image_path("refresh.gif") },
 	      :remote => true %></th>
     </tr>
   </thead>

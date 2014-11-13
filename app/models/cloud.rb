@@ -47,8 +47,7 @@ class Cloud < ActiveRecord::Base
     save!
     user.account.subtract_minutes(runtime * 60)
 
-    ec2.client.create_tags(:resources => [self.instance_id], :tags => [
-                              { :key => 'Name', :value => "#{self.name}" }])
+    tag_and_bag(0)
   end
 
 
@@ -89,5 +88,23 @@ class Cloud < ActiveRecord::Base
     instance.terminate
     self.destroy
   end
+
+  private
+    def tag_and_bag(tries)
+      begin
+        ec2 = AWS::EC2.new(:region => "us-west-2")
+        ec2.client.create_tags(:resources => [self.instance_id], :tags => [
+                              { :key => 'Name', :value => self.name }])
+      rescue => e
+        sleep 1
+        if tries >= 5
+          logger.fatal "ERROR: Could not tag instance #{self.name} after #{tries} attempts!\n\t #{e}"
+          return
+        else
+          logger.warn "WARNING: Attempt #{tries + 1}: Could not tag instance #{self.name}!\n\t #{e}"
+          tag_and_bag(tries + 1)
+        end
+      end
+    end
 
 end

@@ -4,6 +4,7 @@ Myloud::Application.routes.draw do
   get "control_panel" => 'control_panel#index'
   get "control_panel/refresh" => 'control_panel#refresh'
   get "download_key" => 'control_panel#download_key'
+  get "generate_key" => 'control_panel#generate_key'
 
   resources :accounts
   resources :clouds do

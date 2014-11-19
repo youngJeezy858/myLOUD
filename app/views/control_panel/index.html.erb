@@ -1,4 +1,3 @@
-
 <head>
   <%= javascript_include_tag params[:controller] %>
 </head>
@@ -47,21 +46,34 @@
   <div class="span9">
     <h4>Instructions</h4>
     <p>
-      You will need to download the LOUD SSH key to access any of your
-      cLOUD instances.  Use that key to SSH to the IP address of your
-      cLOUD instance.  You will also need to SSH as the default user
-      of your respective Linux distro.  The default user for Ubuntu is
-      ubuntu and the user for fedora is - you guessed it - fedora.
+      You will need to generate a private SSH key to access any of
+      your cLOUD instances. You will not be able to launch a cLOUD
+      until you do so. SSH keys are used as a security measure so that
+      only you will be able to access your instance. Once a key is
+      generated for you it will automatically be downloaded to your
+      PC. Do not share your private key with anyone. Also store your
+      key carefully as you will only be allowed to download it once
+      immediately after generation. You can generate a new key at any
+      time but your old key will be deleted from AWS.
     </p>
+
+    <p>
+      Use that key to SSH to the IP address of your cLOUD instance.
+      You will also need to SSH as the default user of your respective
+      Linux distro.  The default user for Ubuntu is ubuntu and the
+      user for fedora is - you guessed it - fedora.
+    </p>
+
     <h4>Examples</h4>
-    <p>$ ssh -i /path/to/loud.pem ubuntu@IP_OF_UBUNTU_CLOUD</p>
-    <p>$ ssh -i /path/to/loud.pem fedora@IP_OF_FEDORA_CLOUD</p>
+    <p>$ ssh -i /path/to/my_key.pem ubuntu@[IP_OF_UBUNTU_CLOUD]</p>
+    <p>$ ssh -i /path/to/my_key.pem fedora@[IP_OF_FEDORA_CLOUD]</p>
     <p>
       NOTE: you will most likely need to change the permissions of
       your SSH key for it to work as intended.  Use the following
       command to profit.
     </p>
-    <p>$ chmod 600 /path/to/loud.pem</p>
+    <p>$ chmod 600 /path/to/my_key.pem</p>
+
   </div>
 </div>
 

@@ -1,27 +1,19 @@
-
 class ControlPanelController < ApplicationController
-  def index
-  end
 
-  def download_key
-    send_file Rails.root.join('private', 'loud.pem')
+
+  def index
   end
 
 
   def generate_key
     ec2 = AWS::EC2.new(:region => "us-west-2")
     key_pair = ec2.key_pairs[current_user.login]
-    
-    logger.debug key_pair.exists?
-
     if key_pair.exists?
       redirect_to :back, notice: "You must destroy your old SSH key first!"
-
     else
       key_pair = ec2.key_pairs.create(current_user.login)
       send_data key_pair.private_key, :filename => current_user.login + '.pem'
-    end
-    
+    end    
   end
 
 
@@ -30,7 +22,6 @@ class ControlPanelController < ApplicationController
       format.html { render :partial => 'my_instance_list' }
       format.js { }
     end
-
   end
 
 end

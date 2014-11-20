@@ -78,7 +78,6 @@
 </div>
 
 <div class="form-actions">
-  <%= link_to "Launch Cloud", new_cloud_path, :class => 'btn btn-primary' %>
-  <%= link_to "Download SSH Key", download_key_path, class: 'btn', 'data-no-turbolink' => true %>
-  <%= link_to "Generate SSH Key", generate_key_path, class: 'btn', 'data-no-turbolink' => true %>
+  <%= link_to "Launch cLOUD", new_cloud_path, :class => 'btn btn-primary' %>
+  <%= generate_keypair_link(current_user.login) %>
 </div>

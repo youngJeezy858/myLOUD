@@ -6,14 +6,18 @@ class ControlPanelController < ApplicationController
 
 
   def generate_key
+    respond_to do |format|
+      format.js { }
+    end
+  end
+
+
+  def send_key
     ec2 = AWS::EC2.new(:region => "us-west-2")
     key_pair = ec2.key_pairs[current_user.login]
-    if key_pair.exists?
-      redirect_to :back, notice: "You must destroy your old SSH key first!"
-    else
-      key_pair = ec2.key_pairs.create(current_user.login)
-      send_data key_pair.private_key, :filename => current_user.login + '.pem'
-    end    
+    key_pair.delete if key_pair.exists?
+    key_pair = ec2.key_pairs.create(current_user.login)
+    send_data key_pair.private_key, :filename => current_user.login + '.pem'
   end
 
 

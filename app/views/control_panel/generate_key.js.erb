@@ -1,0 +1,5 @@
+window.location.href = "<%= send_key_path %>";
+
+var generate_key_path = $('#generate-key').attr('href');
+
+$('#generate-key').replaceWith("<a href=" + generate_key_path + " class='btn btn-warning' data-confirm='Are you sure? Your old key will be removed from AWS!' data-no-turbolink='true' data-remote='true' id='generate-key'>Replace SSH Key</a>");

@@ -41,7 +41,8 @@ class Cloud < ActiveRecord::Base
       :security_group_ids => user.account.security_group_id,
       :instance_type => "#{ami.size}",
       :subnet => subnet_id,
-      :associate_public_ip_address => true )
+      :associate_public_ip_address => true,
+      :key_pair => ec2.key_pairs[user.login])
 
     self.instance_id = instance.id
     save!

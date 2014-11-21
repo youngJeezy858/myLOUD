@@ -1,13 +1,7 @@
 # Welcome to LCSEE myLOUD on rails
 =================================
 
-*Please see repo [mycloud](https://webgit.lcseecloud.net/lcseesystems/mycloud) for old commits*
-
 ### Dev Environment
-
-Ansible plabook for provisioning dev environments coming soon! For now
-just use the standard rails commands to stand up myLOUD plus the below
-steps.
 
 You will need an AWS account and AWS access keys. Get your keys and
 create this config file (This will not be stored in version control):
